@@ -1,0 +1,383 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #080957;
+    box-shadow: 0px 5px 5px #7577cd;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+    margin-left: 3%;
+    width: 225px;
+    height: auto;
+}
+
+.logo>img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.blank {
+    display: flex;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    flex: 1.5;
+}
+
+.nav-list>* {
+    font-family: Century Gothic;
+    font-weight: bold;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 20px;
+    padding: 3%;
+    color: white;
+}
+
+.nav-list>*:hover {
+    background-color: #7577cd;
+    transition-duration: 0.3s;
+}
+
+.profil {
+    display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.project-page {
+    display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 50px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #00000000, #080957) , url("../../img/recording.jpg") center no-repeat;
+    background-size: cover;
+    padding: 5% 0;
+    min-height: 50vh;
+}
+
+.presentation-title {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    color: white;
+    font-size: 110px;
+    font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
+}
+
+.presentation-subtitle {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
+    font-weight: bold;
+}
+
+.description {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.description-left, .description-right {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 2% 4%;
+}
+
+.description-left {
+    background-color: #080957;
+}
+
+.description-left>.description-info {
+    color: white;
+    border: #7577cd dashed 6px;
+}
+
+.description-right>.description-info {
+    border: #080957 dashed 6px;
+}
+
+.description-filler {
+    width: 50px;
+}
+
+.description-picture-area {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.description-picture {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.description-info {
+    flex: 1;
+    display: flex;
+    box-sizing: border-box;
+    padding: 2%;
+    border-radius: 10px;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 24px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-direction: row;
+    background-color: #080957;
+    box-shadow: 0px -5px 5px #7577cd;
+    padding: 1%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    flex: 1;
+}
+
+.links>a {
+    display: flex;
+    padding: 1%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Century Gothic;
+    font-weight: bold;
+    color: white;
+    width: max-content;
+}
+
+.links>a:hover {
+    background-color: #7577cd;
+    transition-duration: 0.3s;
+}
+
+.adress-area {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1;
+}
+
+.adress {
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1%;
+    text-decoration: none;
+    font-family: Century Gothic;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+
+.adress:hover {
+    background-color: #7577cd;
+    transition-duration: 0.3s;
+}
+
+.help-area {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: end;
+    flex: 1;
+}
+
+.help {
+    display: flex;
+    box-sizing: border-box;
+    padding: 1%;
+    width: 80px;
+    height: auto;
+}
+
+.help>img {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .logo {
+        width: 250px;
+    }
+
+    .nav-list {
+        flex: 8;
+    }
+
+    .adress-area {
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .blank {
+        flex: none;
+    }
+
+    .nav-list {
+        flex: 1;
+    }
+
+    .presentation-title {
+        font-size: 90px;
+    }
+
+    .presentation-subtitle {
+        font-size: 34px;
+    }
+
+    .description-left {
+        flex-direction: column;
+    }
+
+    .description-right {
+        flex-direction: column-reverse;
+    }
+
+    .description-left>.description-info, .description-right>.description-info {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .sticky + .content {
+        padding-top: 105px;
+    }
+
+    .logo-area {
+        justify-content: center;
+    }
+
+    .adress {
+        text-align: center;
+    }
+
+    .presentation {
+        padding: 10% 0;
+    }
+
+    .presentation-title {
+        font-size: 50px;
+    }
+
+    .presentation-subtitle {
+        font-size: 24px;
+    }
+
+    .description-right>.description-info {
+        font-size: 16px;
+    }
+
+    .description-left>.description-info {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .help {
+        width: 40px;
+    }
+
+    .adress {
+        font-size: 16px;
+    }
+
+    .links>a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet : Site Internet</title>
+        <link rel="stylesheet" href="css/style-website.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="../profil.html" class="profil">Mon profil</a>
+                    <a href="../projets.html" class="project-page">Projets</a>
+                    <a href="../contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="presentation">
+                <h1 class="presentation-title">raphael-durand.fr</h1>
+                <p class="presentation-subtitle">Mon site internet portfolio</p>
+            </div>
+            <div class="description">
+                <div class="description-left">
+                    <div class="description-picture-area">
+                        <img src="../img/apercu-projets.png" class="description-picture">
+                    </div>
+                    <div class="description-filler"></div>
+                    <p class="description-info">
+                        Cet été 2023, j'ai décidé de mettre mes connaissances en programmation web à l'épreuve en réalisant ce site internet.<br>
+                        <br>
+                        J'ai pris l'initiative de créer cet outil dans le but de me mettre avant, grâce à mes réalisations informatiques.
+                        Ce site est également le moyen le plus efficace que j'ai trouvé pour vous transmettre mon profil professionnel avec des documents
+                        comme mon CV.<br>
+                        <br>
+                        Dans le cadre de mon BUT informatique, ce projet est également un bon moyen de réutiliser les connaissances que j'ai acquises lors de cette première année.
+                    </p>
+                </div>
+                <div class="description-right">
+                    <p class="description-info">
+                        Une autre raison qui m'a donné envie de réaliser ce projet vient de mon portfolio universitaire.<br>
+                        <br>
+                        En effet, nous devons réaliser dans le cadre du BUT un portfolio sur une plateforme universitaire (ici Mahara).
+                        Le problème étant que le portfolio est supprimé des serveurs de l'université une fois notre formation terminée 
+                        (sans possibilité d'exportation...).<br>
+                        <br>
+                        J'ai donc pris la démarche de créer une plateforme plus durable qui pourra me suivre au cours de ma carrière.
+                    </p>
+                    <div class="description-filler"></div>
+                    <div class="description-picture-area">
+                        <img src="../img/mahara.png" class="description-picture">
+                    </div>
+                </div>
+                <div class="description-left">
+                    <div class="description-picture-area">
+                        <img src="../img/croquis.jpg" class="description-picture">
+                    </div>
+                    <div class="description-filler"></div>
+                    <p class="description-info">
+                        Pour réaliser ce projet, j'ai donc réfléchi pour vous proposer la meilleure expérience possible avec une interface agréable à utiliser.<br>
+                        <br>
+                        Pour atteindre ce but, j'ai réalisé de nombreux croquis pour convenir à un design qui me correspond. Ce projet m'a permis de mettre en avant
+                        ma créativité ainsi que mon imagination. J'ai également pris conscience des progrès qu'il me reste à faire en termes de développement.<br>
+                        <br>
+                        Bien sûr, ce projet est loin d'être achevé : en plus des diverses améliorations du site, il me reste encore de nombreux travaux à vous partager.
+                        Actuellement, ce site est en majorité écrit en HTML et CSS directement avec quelques programmes en PHP. J'aimerais notamment utiliser plus de JavaScript.
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="../informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="../index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="../help.html" class="help">
+                    <img src="../img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+    </body>
+</html>

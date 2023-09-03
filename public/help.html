@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assistance</title>
+        <link rel="stylesheet" href="css/style-help.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="img/logo/facebook_cover_photo_1.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="profil.html" class="profil">Mon profil</a>
+                    <a href="projets.html" class="project-page">Projets</a>
+                    <a href="contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <h1 class="title">Besoin d'aide pour se repérer ?</h1>
+            <div class="faq">
+                <button class="question">
+                    Où puis-je en apprendre davantage sur ton profil ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Toutes les informations concernant mon profil professionnelles sont dans la page <a href="profil.html" class="more-profil">Mon Profil</a>. <br>
+                        Vous y retrouverez entre autres mon CV et ainsi que mon cursus.
+                    </p>
+                </div>
+                <button class="question">
+                    Où puis-je télécharger ton curriculum vitae (CV) ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Mon curriculum vitae est disponible dans la page <a href="profil.html" class="more-profil">Mon Profil</a>.
+                    </p>
+                </div>
+                <button class="question">
+                    Où sont les Conditions Générales d'Utilisation (CGU) ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Les CGU sont disponibles dans l'onglet <a href="informations.html" class="more-informations">A Propos</a> en bas à gauche de la page.
+                    </p>
+                </div>
+                <button class="question">
+                    Comment est-ce que je peux te contacter ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Il est possible de me contacter en remplissant le formulaire de contact dans l'onglet <a href="contact.html" class="more-contact">Contact</a>.
+                    </p>
+                </div>
+                <button class="question">
+                    Que deviennent mes données après avoir utilisé le formulaire de contact ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Les données demandées dans le formulaire de contact me permettent de répondre à votre message. Ces données ne sont stockées que jusqu'à ce que le message
+                        soit traité. En aucun cas, vos données ne sont ni revendues ni utilisées à des fins commerciales. 
+                    </p>
+                </div>
+                <button class="question">
+                    Ce site utilise-t-il des cookies ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Non, actuellement, ce site internet n'utilise pas de cookies.
+                    </p>
+                </div>
+                <button class="question">
+                    Puis-je réutiliser les photos présentent sur le site ?
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="answer">
+                    <p class="answer-content">
+                        Certaines des photos sont libres de droits et d'autres appartiennent à leur auteur respectif (Moi y compris).<br>
+                        Pour utiliser ces photos, vous devez m'écrire via le <a href="contact.html" class="more-contact">formulaire de contact</a>
+                        avant de les utiliser pour ne pas violer la propriété intellectuelle.
+                    </p>
+                </div>
+            </div>
+            <div class="fill"></div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="help.html" class="help">
+                    <img src="img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+
+            var question = document.getElementsByClassName("question");
+            var fa = document.getElementsByClassName("fa");
+            var i;
+
+            for (i = 0; i < question.length; i++) {
+                question[i].addEventListener("click", function () {
+
+                var answer = this.nextElementSibling;
+
+                if (answer.style.display === "flex") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "flex";
+                }
+                });
+            }
+            
+        </script>
+    </body>
+</html>

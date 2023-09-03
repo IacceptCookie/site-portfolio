@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projets</title>
+        <link rel="stylesheet" href="css/style-projets.css">
+        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="img/logo/facebook_cover_photo_1.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="profil.html" class="profil">Mon profil</a>
+                    <a href="projets.html" class="project-page">Projets</a>
+                    <a href="contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="projects-area">
+                <h1 class="projects-title">Mes projets en cours</h1>
+                <div class="projects-view">
+                    <a href="project/alternance.html" class="project">
+                        <div class="alter">
+                            <div class="content-project">
+                                <h1>Alternance
+                                </h1>
+                            </div>
+                        </div>
+                        <p>
+                            Dans mes études, 
+                            j’aimerais pouvoir suivre une formation en alternance dans une entreprise
+                            dont les domaines d'action sont pertinents et correspondent à mon domaine d'études.
+                            Dans le cadre de ma formation (BUT informatique),
+                            je suis le parcours DATA qui s’intéresse à la gestion
+                            et à l’utilisation des données dans différents moyens d’applications…
+                        </p>
+                    </a>
+                    <a href="project/sound.html" class="project">
+                        <div class="sound">
+                            <div class="content-project">
+                                <h1>Reconnaissance Vocale
+                                </h1>
+                            </div>
+                        </div>
+                        <p>
+                            Un projet personnel qui me tient à cœur est la réalisation d’un logiciel de reconnaissance vocale.
+                            Bien que cette fonctionnalité soit déjà intégrée dans des produits d'entreprises telles que Google et Microsoft,
+                            j'aimerais travailler sur ce projet afin de concrétiser un autre projet plus ambitieux :
+                            la réalisation d'un chatbot vocal…
+                        </p>
+                    </a>
+                    <a href="project/website.html" class="project">
+                        <div class="website">
+                            <div class="content-project">
+                                <h1>Site Internet
+                                </h1>
+                            </div>
+                        </div>
+                        <p>
+                            Ce projet concerne la réalisation du site internet actuel,
+                            qui est actuellement en développement et sera amélioré.
+                            Le site suit un format de portfolio qui présente à la fois mon profil 
+                            et les projets sur lesquels je travaille actuellement. 
+                            Il présentera également les projets achevés au moment opportun…
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="old-projects-area">
+                <h1 class="old-projects-title">Mes projets achevés / finis</h1>
+                <div class="old-projects-view"></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="help.html" class="help">
+                    <img src="img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+    </body>
+</html>

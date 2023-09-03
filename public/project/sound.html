@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet : Reconnaissance Vocale</title>
+        <link rel="stylesheet" href="css/style-sound.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="../profil.html" class="profil">Mon profil</a>
+                    <a href="../projets.html" class="project-page">Projets</a>
+                    <a href="../contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <div class="presentation">
+                <h1 class="presentation-title">Zilliax</h1>
+                <p class="presentation-subtitle">Mon projet de reconnaissance vocale</p>
+            </div>
+            <div class="description">
+                <div class="description-left">
+                    <div class="description-picture-area">
+                        <img src="../img/sound-wave.jpg" class="description-picture">
+                    </div>
+                    <div class="description-filler"></div>
+                    <p class="description-info">
+                        Ce projet est une idée qui m'occupe l'esprit depuis des années. Il s'agit de la réalisation de mon propre logiciel de reconnaissance vocale.<br>
+                        <br>
+                        Pour le moment, je n'ai pas vraiment commencé à travailler sur ce projet, qui est plus en état de genèse. Je n'ai donc pour le moment pas grand-chose
+                        à vous proposer.<br>
+                        <br>
+                        Le but de ce logiciel serait de pouvoir retranscrire sous forme écrite des sons analogiques correspondant à des mots. La finalité de ce projet est
+                        d'élaborer mon propre chatbot vocal, nom de code Zilliax.
+                    </p>
+                </div>
+                <div class="description-right">
+                    <p class="description-info">
+                        Qui est Zilliax ?<br>
+                        <br>
+                        Il s'agit d'un robot venant du jeu de cartes Hearthstone. Sa devise "Unité, Précision, Perfection", correspond au but final de tout programme informatique.<br>
+                        <br>
+                        Bientôt, Zilliax ne sera plus un personnage de fiction, mais un véritable outil du progrès.
+                    </p>
+                    <div class="description-filler"></div>
+                    <div class="description-picture-area">
+                        <img src="../img/Zilliax_cover.webp" class="description-picture">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="../informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="../index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="../help.html" class="help">
+                    <img src="../img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+    </body>
+</html>

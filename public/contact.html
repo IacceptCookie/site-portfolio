@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Me contacter</title>
+        <link rel="stylesheet" href="css/style-contact.css">
+        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="index.html" class="logo">
+                    <img src="img/logo/facebook_cover_photo_1.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="profil.html" class="profil">Mon profil</a>
+                    <a href="projets.html" class="project-page">Projets</a>
+                    <a href="contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+        <h1 class="contact-title">Pour me contacter</h1>
+        <form action="contact.php" id="contact" name="contact" class="contact-form" method="post">
+            <input type="text" name="name" placeholder="Nom" class="form-name" required>
+            <input type="text" name="surname" placeholder="Prénom" class="form-surname" required>
+            <input type="email" name="email" placeholder="Email" class="form-email" required>
+            <textarea name="message" placeholder="Message" class="form-message" form="contact" required></textarea>
+            <label for="cgu" class="form-cgu-label">
+                <input type="checkbox" name="cgu" id="cgu" class="form-cgu" required>
+                J'ai pris connaissance et j'accepte les <a href="informations.html">conditions générales d'utilisation</a>
+            </label>
+            <button type="submit" class="form-submit">Envoyer</button>
+        </form>
+        <p class="warning">Merci de ne pas déposer de spam/pubs, contact professionnel uniquement.
+            Tout message inapproprié ne sera pas traité. En complétant ce formulaire, vous consentez à communiquer
+            les informations demandées. Ces dernières ne sont pas collectées dans un but commercial.</p>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="help.html" class="help">
+                    <img src="img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+    </body>
+</html>
