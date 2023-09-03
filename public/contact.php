@@ -65,4 +65,5 @@ $headers = "From:" . $from;
 if (!mail($to, $subject, $message, $headers)) {
     echo "<script type='text/javascript'>document.location.replace('contact_error/error_not_send.html');</script>";
 }
+echo "<script type='text/javascript'>document.location.replace('contact.html');</script>";
 exit();
