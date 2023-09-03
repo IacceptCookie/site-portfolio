@@ -1,0 +1,18 @@
+{
+    "name": "duran/site-portefolio-github",
+    "description": "Développement d'un site internet portfolio",
+    "type": "project",
+    "license": "Copyleft",
+    "autoload": {
+        "psr-4": {
+            "Duran\\SitePortefolioGithub\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raphaël DURAND",
+            "email": "durandraphael.courriel@gmail.com"
+        }
+    ],
+    "require": {}
+}
