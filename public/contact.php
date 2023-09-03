@@ -15,7 +15,7 @@ try {
             throw new Exception("Nom invalide");
         } else {
             $name = test_input($_POST["name"]);
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+            if (!preg_match("/^[a-zA-Z-'àâïîëéèêôùûçÀÂÉÈÔÙÛÇ ]*$/", $name)) {
                 throw new Exception("Nom invalide");
             }
         }
@@ -24,7 +24,7 @@ try {
             throw new Exception("Prenom invalide");
         } else {
             $surname = test_input($_POST["surname"]);
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+            if (!preg_match("/^[a-zA-Z-'àâïîëéèêôùûçÀÂÉÈÔÙÛÇ ]*$/", $name)) {
                 throw new Exception("Prenom invalide");
             }
         }
@@ -46,7 +46,7 @@ try {
     }
 } catch (Exception) {
     header("HTTP/1.1 302 Found");
-    header("Location: /contact/error_incorrect_value.html");
+    header("Location: contact_error/error_incorrect_value.html");
     exit();
 }
 
@@ -58,12 +58,11 @@ $subject = "Website Contact : Nouveau message de ".$surname." ".$name;
 
 $from = "contact@raphael-durand.fr";
 
-$to = file_get_contents('./.destination', true);
+$to = file_get_contents('../.destination', true);
 
 $headers = "From:" . $from;
 
 if (!mail($to, $subject, $message, $headers)) {
-    header("HTTP/1.1 302 Found");
-    header("Location: /contact/error_not_send.html");
+    echo "<script type='text/javascript'>document.location.replace('contact_error/error_not_send.html');</script>";
 }
 exit();
