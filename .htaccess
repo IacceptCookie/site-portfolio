@@ -1,2 +1,5 @@
-RewriteEngine On
-RewriteRule ^(.*)$ public/$1 [L]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^raphael-durand.fr$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.raphael-durand.fr$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
