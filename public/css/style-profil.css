@@ -149,7 +149,7 @@ body {
 
 .presentation-info>p {
     font-family: Roboto, sans-serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: lighter;
     display: flex;
     align-self: center;
@@ -170,8 +170,7 @@ body {
 .skills-title {
     color: white;
     font-family: Source Sans Pro, sans-serif;
-    border: #7577cd 3px solid;
-    border-radius: 3px;
+    font-size: 40px;
     width: fit-content;
     padding: 0.5%;
     align-self: center;
@@ -224,9 +223,8 @@ body {
 .experience-title {
     color: black;
     font-family: Source Sans Pro, sans-serif;
-    border: #7577cd 3px solid;
-    border-radius: 3px;
     width: fit-content;
+    font-size: 40px;
     padding: 0.5%;
     align-self: center;
 }
@@ -291,7 +289,7 @@ body {
 }
 
 .experience-picture.iut {
-    background-image: url(../img/iut.PNG);
+    background-image: url(../img/iut.jpg);
 }
 
 .experience-info {
@@ -323,8 +321,7 @@ body {
 .download {
     display: flex;
     padding: 1%;
-    border-radius: 5px;
-    border: #7577cd 3px solid;
+    border-radius: 10px;
     box-sizing: border-box;
     text-decoration: none;
     font-family: Century Gothic;
@@ -349,6 +346,7 @@ body {
     background-color: #080957;
     box-shadow: 0px -5px 5px #7577cd;
     padding: 1%;
+    min-height: 120px;
 }
 
 .links {
@@ -361,7 +359,9 @@ body {
 
 .links>a {
     display: flex;
-    padding: 1%;
+    padding: 1.5%;
+    margin: 1px;
+    font-size: 18px;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -414,7 +414,8 @@ body {
     box-sizing: border-box;
     padding: 1%;
     width: 80px;
-    height: auto;
+    height: 80px;
+    align-self: center;
 }
 
 .help>img {
@@ -482,6 +483,10 @@ body {
         flex: 2;
     }
 
+    .skills-title,.experience-title {
+        font-size: 32px;
+    }
+
     .skills {
         flex-direction: column;
     }
@@ -490,7 +495,7 @@ body {
         border-right: solid #7577cd 0px;
     }
 
-    .downloadable {
+    .downloadable,.download {
         padding: 4%;
     }
 
@@ -519,19 +524,26 @@ body {
     .adress {
         text-align: center;
     }
+
+    .footer {
+        padding: 2% 1%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .help {
-        width: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .adress {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .links>a {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 4%;
+        margin: 5px;
     }
 
     .experience-info {

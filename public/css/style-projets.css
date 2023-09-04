@@ -128,13 +128,12 @@ body {
 .projects-title {
     text-align: center;
     box-sizing: border-box;
-    border: #7577cd solid 3px;
     width: fit-content;
     align-self: center;
     padding: 0.5%;
     color: white;
     font-family: Source Sans Pro, sans-serif ;
-    border-radius: 10px;
+    font-size: 40px;
 }
 
 .projects-view {
@@ -230,14 +229,12 @@ body {
 .old-projects-title {
     text-align: center;
     box-sizing: border-box;
-    border: #3033AD solid 3px;
-    background-color: #7577cd;
     width: fit-content;
     align-self: center;
     padding: 0.5%;
     color: black;
     font-family: Source Sans Pro, sans-serif ;
-    border-radius: 10px;
+    font-size: 40px;
 }
 
 .old-projects-view {
@@ -257,6 +254,7 @@ body {
     background-color: #080957;
     box-shadow: 0px -5px 5px #7577cd;
     padding: 1%;
+    min-height: 120px;
 }
 
 .links {
@@ -269,7 +267,9 @@ body {
 
 .links>a {
     display: flex;
-    padding: 1%;
+    padding: 1.5%;
+    margin: 1px;
+    font-size: 18px;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -322,7 +322,8 @@ body {
     box-sizing: border-box;
     padding: 1%;
     width: 80px;
-    height: auto;
+    height: 80px;
+    align-self: center;
 }
 
 .help>img {
@@ -361,6 +362,10 @@ body {
     .project {
         margin: 1% 0;
     }
+
+    .projects-title, .old-projects-title {
+        font-size: 32px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -387,18 +392,25 @@ body {
     .content-project>p {
         font-size: 18px;
     }
+
+    .footer {
+        padding: 2% 1%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .help {
-        width: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .adress {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .links>a {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 4%;
+        margin: 5px;
     }
 }

@@ -116,8 +116,9 @@ body {
 .title {
     display: flex;
     justify-content: center;
+    text-align: center;
     box-sizing: border-box;
-    font-size: 32px;
+    font-size: 40px;
     font-family: Roboto, sans-serif;
 }
 
@@ -186,6 +187,7 @@ body {
     background-color: #080957;
     box-shadow: 0px -5px 5px #7577cd;
     padding: 1%;
+    min-height: 120px;
 }
 
 .links {
@@ -198,7 +200,9 @@ body {
 
 .links>a {
     display: flex;
-    padding: 1%;
+    padding: 1.5%;
+    margin: 1px;
+    font-size: 18px;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -251,7 +255,8 @@ body {
     box-sizing: border-box;
     padding: 1%;
     width: 80px;
-    height: auto;
+    height: 80px;
+    align-self: center;
 }
 
 .help>img {
@@ -277,6 +282,10 @@ body {
 @media only screen and (max-width: 800px) {
     .blank {
         flex: none;
+    }
+
+    .title {
+        font-size: 32px;
     }
 
     .nav-list {
@@ -308,18 +317,25 @@ body {
     .adress {
         text-align: center;
     }
+
+    .footer {
+        padding: 2% 1%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .help {
-        width: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .adress {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .links>a {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 4%;
+        margin: 5px;
     }
 }

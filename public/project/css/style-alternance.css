@@ -133,6 +133,7 @@ body {
     color: white;
     font-size: 110px;
     font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
+    text-align: center;
 }
 
 .presentation-subtitle {
@@ -144,6 +145,7 @@ body {
     font-size: 40px;
     font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 .description {
@@ -209,8 +211,7 @@ body {
 .more-contact {
     display: flex;
     padding: 2%;
-    border-radius: 5px;
-    border: #7577cd 3px solid;
+    border-radius: 10px;
     box-sizing: border-box;
     text-decoration: none;
     font-family: Century Gothic;
@@ -226,8 +227,7 @@ body {
 .more-profil {
     display: flex;
     padding: 2%;
-    border-radius: 5px;
-    border: #7577cd 3px solid;
+    border-radius: 10px;
     box-sizing: border-box;
     text-decoration: none;
     font-family: Century Gothic;
@@ -247,7 +247,7 @@ body {
 }
 
 .more-profil:hover {
-    background-color: #0D0F80;
+    background-color: #414399;
     transition: 0.3s;
 }
 
@@ -259,6 +259,7 @@ body {
     background-color: #080957;
     box-shadow: 0px -5px 5px #7577cd;
     padding: 1%;
+    min-height: 120px;
 }
 
 .links {
@@ -271,7 +272,9 @@ body {
 
 .links>a {
     display: flex;
-    padding: 1%;
+    padding: 1.5%;
+    margin: 1px;
+    font-size: 18px;
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
@@ -324,7 +327,8 @@ body {
     box-sizing: border-box;
     padding: 1%;
     width: 80px;
-    height: auto;
+    height: 80px;
+    align-self: center;
 }
 
 .help>img {
@@ -378,6 +382,7 @@ body {
 
     .more-contact,.more-profil {
         font-size: 20px;
+        padding: 4%;
     }
 }
 
@@ -417,18 +422,25 @@ body {
     .description-left>.description-info {
         font-size: 16px;
     }
+
+    .footer {
+        padding: 2% 1%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .help {
-        width: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .adress {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .links>a {
-        font-size: 14px;
+        font-size: 16px;
+        padding: 4%;
+        margin: 5px;
     }
 }
