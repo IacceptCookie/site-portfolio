@@ -126,7 +126,6 @@
             }
 
             var question = document.getElementsByClassName("question");
-            var fa = document.getElementsByClassName("fa");
             var i;
 
             for (i = 0; i < question.length; i++) {
@@ -134,10 +133,14 @@
 
                 var answer = this.nextElementSibling;
 
-                if (answer.style.display === "flex") {
-                    answer.style.display = "none";
+                if ((answer.style.maxHeight === "0px") || !(answer.getAttribute("style"))) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    this.classList.add("active");
+                    answer.classList.add("active");
                 } else {
-                    answer.style.display = "flex";
+                    answer.style.maxHeight = "0px";
+                    this.classList.remove("active");
+                    answer.classList.remove("active");
                 }
                 });
             }
