@@ -342,6 +342,63 @@ body {
     height: auto;
 }
 
+.cookie-consent {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(117, 119, 205, 0.9);
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+}
+
+.cookie-consent-info {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.cookie-consent-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie-consent-check>button {
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cookie-consent-accept {
+    background-color: #08832d;
+}
+
+.cookie-consent-accept:hover {
+    background-color: #17a843;
+}
+
+.cookie-consent-refuse {
+    background-color: #be1313;
+}
+
+.cookie-consent-refuse:hover {
+    background-color: #e42828;
+}
+
+
 @media only screen and (max-width: 1000px) {
     .logo {
         width: 250px;
@@ -383,6 +440,15 @@ body {
         
     .project {
         margin: 1% 0;
+    }
+
+    .cookie-consent {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .cookie-consent-info {
+        text-align: center;
     }
 }
 
