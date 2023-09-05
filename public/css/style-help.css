@@ -165,7 +165,7 @@ body {
     max-width: 800px;
     padding: 0 1%;
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .answer.active {
@@ -173,7 +173,7 @@ body {
 }
 
 .fa {
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .answer-content {

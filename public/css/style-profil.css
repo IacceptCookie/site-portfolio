@@ -181,6 +181,7 @@ body {
     box-sizing: border-box;
     flex: 1;
     border-radius: 3px;
+    flex-wrap: wrap;
 }
 
 .skills>* {
@@ -189,6 +190,8 @@ body {
     box-sizing: border-box;
     flex: 1;
     padding: 0.5%;
+    flex-basis: 33%;
+    margin-bottom: 2%;
 }
 
 .skills>*>h1 {
@@ -208,7 +211,7 @@ body {
     font-size: 22px;
 }
 
-.skills-professionnal, .skills-proglanguages {
+.skills-left, .skills-middle {
     border-right: solid #7577cd 3px;
 }
 
@@ -315,6 +318,27 @@ body {
     box-sizing: border-box;
     flex: 1;
     padding: 2%;
+}
+
+.downloadable-title {
+    display: flex;
+    color: black;
+    font-family: Source Sans Pro, sans-serif;
+    width: fit-content;
+    font-size: 40px;
+    padding: 0.5%;
+    align-self: center;
+    text-align: center;
+}
+
+.downloadable-picture {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 1%;
+    align-self: center;
 }
 
 .download {
@@ -482,7 +506,7 @@ body {
         flex: 2;
     }
 
-    .skills-title,.experience-title {
+    .skills-title, .experience-title, .downloadable-title {
         font-size: 32px;
     }
 
@@ -490,7 +514,7 @@ body {
         flex-direction: column;
     }
 
-    .skills-professionnal, .skills-proglanguages {
+    .skills-left, .skills-middle {
         border-right: solid #7577cd 0px;
     }
 
