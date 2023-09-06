@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bienvenue</title>
-        <link rel="stylesheet" href="css/style-index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Projets</title>
+        <link rel="stylesheet" href="css/style-projets.css">
         <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
     </head>
     <body>
@@ -22,49 +21,18 @@
             <div class="nav">
                 <div class="blank"></div>
                 <div class="nav-list">
-                    <div class="select-language">
-                        <div class="selected-language fr">
-                            Français
-                            <i class="fa fa-chevron-down"></i>
-                        </div>
-                        <div class="language-list">
-                            <div class="language en">English</div>
-                        </div>
-                    </div>
                     <a href="profil.html" class="profil">Mon profil</a>
                     <a href="projets.html" class="project-page">Projets</a>
                     <a href="contact.html" class="contact">Contact</a>
                 </div>
             </div>
             <div class="nav-mobile">
-                <div class="select-language">
-                    <div class="selected-language fr">
-                        Français
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                    <div class="language-list">
-                        <div class="language en">English</div>
-                    </div>
-                </div>
                 <a href="profil.html" class="profil">Mon profil</a>
                 <a href="projets.html" class="project-page">Projets</a>
                 <a href="contact.html" class="contact">Contact</a>
             </div>
         </header>
         <main class="content">
-            <div class="presentation">
-                <div class="presentation-info">
-                    <p>
-                        Je m’appelle Raphaël DURAND, 
-                        je suis étudiant en informatique à l'IUT de Reims Champagne-Ardenne. 
-                        J’ai développé ce site internet pour mettre en valeur mes différents projets en cours et futurs, 
-                        ainsi que promouvoir mon profil professionnel.
-                    </p>
-                </div>
-                <div class="presentation-picture">
-                    <img src="img/workinprogress.jpg" alt="photo">
-                </div>
-            </div>
             <div class="projects-area">
                 <h1 class="projects-title">Mes projets en cours</h1>
                 <div class="projects-view">
@@ -115,7 +83,10 @@
                     </a>
                 </div>
             </div>
-            <div class="fill"></div>
+            <div class="old-projects-area">
+                <h1 class="old-projects-title">Mes projets achevés / finis</h1>
+                <div class="old-projects-view"></div>
+            </div>
         </main>
         <footer class="footer">
             <div class="links">
@@ -131,17 +102,20 @@
                 </a>
             </div>
         </footer>
-        <div class="cookie-consent">
-            <p class="cookie-consent-info">
-                Ce site utilise des cookies internes pour conserver vos préférences (choix de langue). <br>
-                Nous n'utilisons pas de cookies tiers et les cookies ne sont pas utilisés à des fins commerciales.
-            </p>
-            <div class="cookie-consent-check">
-                <button class="cookie-consent-refuse">Je refuse</button>
-                <button class="cookie-consent-accept">J'accepte</button>
-            </div>
-        </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
         <script src="js/nav.js"></script>
-        <script src="js/cookie.js"></script>
     </body>
 </html>

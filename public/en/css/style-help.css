@@ -17,7 +17,6 @@ body {
     box-sizing: border-box;
     background-color: #080957;
     box-shadow: 0px 5px 5px #7577cd;
-    align-items: center;
 }
 
 .logo-area {
@@ -33,7 +32,7 @@ body {
     text-decoration: none;
     margin-left: 3%;
     width: 225px;
-    height: 55px;
+    height: auto;
 }
 
 .logo-large {
@@ -48,72 +47,15 @@ body {
     height: auto;
 }
 
-.select-language {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    cursor: pointer;
-}
-
-.selected-language {
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.selected-language i {
-    margin-left: 5px;
-}
-
-.language-list {
-    position: absolute;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    display: none;
-    width: 100%;
-    background-color: #080957;
-    border: 1px solid #7577cd;
-}
-
-.language {
-    text-align: center;
-    padding: 3%;
-    cursor: pointer;
-}
-
-.language:hover {
-    background-color: #7577cd;
-}
-
-.fr::before {
-    background-image: url(../img/fr.png);
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.en::before {
-    background-image: url(../img/us.png);
-    content: '';
-    display: inline-block;
-    align-self: center;
-    width: 30px;
-    height: 16px;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 .nav {
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.blank {
+    display: flex;
     box-sizing: border-box;
     flex: 1;
 }
@@ -123,7 +65,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     box-sizing: border-box;
-    flex: 3;
+    flex: 1.5;
 }
 
 .nav-hamburger {
@@ -224,146 +166,83 @@ body {
     padding-top: 50px;
 }
 
-.presentation {
+.title {
     display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-}
-
-.presentation-info {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex: 1;
     justify-content: center;
-}
-
-.presentation-info>p {
-    font-family: Roboto, sans-serif;
-    font-size: 28px;
-    display: flex;
-    align-self: center;
     text-align: center;
-    padding: 0 2%;
+    box-sizing: border-box;
+    font-size: 40px;
+    font-family: Roboto, sans-serif;
 }
 
-.presentation-picture {
+.faq {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
     box-sizing: border-box;
-    flex: 1;
-    justify-content: center;
+    padding: 1% 2%;
 }
 
-.presentation-picture>img {
+.question {
     display: flex;
-    padding: 1%;
     box-sizing: border-box;
+    font-size: 26px;
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    max-width: 800px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #D7E3EA;
+    padding: 2%;
+    margin: 10px 0;
+    justify-content: space-between;
+    border-radius: 5px;
 }
 
-.projects-area {
+.question:hover {
+    background-color: #CED7DB;
+    transition: 0.4s;
+}
+
+.answer {
     display: flex;
-    flex-direction: column;
-    background-color: #080957;
-    padding-bottom: 1%;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    max-height: 0px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 1%;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.answer.active {
     margin-bottom: 20px;
 }
 
-.projects-title {
-    text-align: center;
+.fa {
+    transition: 0.3s ease;
+}
+
+.answer-content {
     box-sizing: border-box;
-    width: fit-content;
-    align-self: center;
-    padding: 0.5%;
-    color: white;
-    font-family: Source Sans Pro, sans-serif ;
-    font-size: 40px;
-}
-
-.projects-view {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: center;
-    padding: 0 5%;
-    flex: 1;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex: 1;
-    margin: 0 0.5%;
-    border: #7577cd solid 3px;
-    background-color: #3033AD;
-    border-radius: 3px;
-    text-decoration: none;
-}
-
-.project:hover {
-    box-shadow: 0 0 10px 5px #7577cd;
-    transition-duration: 0.3;
-}
-
-.alter {
-    background-image: url("../img/view-modern-office.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.sound {
-    background-image: url("../img/recording.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.website {
-    background-image: url("../img/dev-desk.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.content-project {
-    display: flex;
-    flex: 1;
-    background-color: rgba(41, 41, 78, 0.8);
-}
-
-.content-project>h1 {
-    display: flex;
-    box-sizing: border-box;
-    color: white;
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    margin: 1%;
-    flex: 1;
-    min-height: 250px;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.project>p {
-    display: flex;
-    box-sizing: border-box;
-    color: white;
     font-size: 20px;
     font-family: Roboto, sans-serif;
-    padding: 2%;
-    text-decoration: none;
-    justify-content: center;
-    flex-direction: column;
+    opacity: 0.8;
 }
 
-.project:hover .content-project {
-    background-color: rgba(47, 46, 55, 0.4);
-    transition-duration: 0.3s;
+.question.active>.fa {
+    transform: rotate(180deg);
 }
 
 .fill {
     height: 20px;
+    display: flex;
     flex: 1;
 }
 
@@ -453,63 +332,11 @@ body {
     height: auto;
 }
 
-.cookie-consent {
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    align-items: center;
-    padding: 5px 10px;
-    background-color: rgba(117, 119, 205, 0.9);
-    z-index: 1;
-    position: sticky;
-    bottom: 0;
-}
-
-.cookie-consent-info {
-    display: flex;
-    font-family: Roboto, sans-serif;
-    color: black;
-    font-size: 20px;
-}
-
-.cookie-consent-check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cookie-consent-check>button {
-    box-sizing: border-box;
-    padding: 8px;
-    font-family: Roboto, sans-serif;
-    color: white;
-    font-size: 20px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-.cookie-consent-accept {
-    background-color: #08832d;
-}
-
-.cookie-consent-accept:hover {
-    background-color: #17a843;
-}
-
-.cookie-consent-refuse {
-    background-color: #be1313;
-}
-
-.cookie-consent-refuse:hover {
-    background-color: #e42828;
-}
-
-
 @media only screen and (max-width: 1000px) {
+    .logo {
+        width: 250px;
+    }
+
     .nav-list {
         flex: 8;
     }
@@ -520,44 +347,30 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-    .presentation {
-        flex-direction: column;
+    .blank {
+        flex: none;
     }
 
-    .presentation-info>p {
-        font-size: 22px;
-    }
-
-    .projects-title {
+    .title {
         font-size: 32px;
-    }
-
-    .projects-view {
-        flex-direction: column;
     }
 
     .nav-list {
         flex: 1;
     }
-        
-    .project {
-        margin: 1% 0;
+
+    .question {
+        font-size: 20px;
     }
 
-    .cookie-consent {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .cookie-consent-info {
-        text-align: center;
+    .answer-content {
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .header {
         flex-direction: column;
-        align-items: unset;
     }
 
     .logo-large {
@@ -581,7 +394,7 @@ body {
     }
 
     .logo {
-        max-width: 55px;
+        max-width: 80px;
     }
 
     .sticky + .content {
@@ -594,14 +407,6 @@ body {
 
     .adress {
         text-align: center;
-    }
-
-    .content-project>h1 {
-        font-size: 18px;
-    }
-
-    .content-project>p {
-        font-size: 18px;
     }
 
     .footer {

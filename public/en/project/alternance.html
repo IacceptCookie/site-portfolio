@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet : Alternance</title>
+        <link rel="stylesheet" href="css/style-alternance.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="../index.html" class="logo">
+                    <img class="logo-large" src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                    <img class="logo-mobile" src="../img/logo/logo-only.png" alt="logo">
+                </a>
+                <button class="nav-hamburger">
+                    <img src="../img/hamburger.png">
+                </button>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="../profil.html" class="profil">Mon profil</a>
+                    <a href="../projets.html" class="project-page">Projets</a>
+                    <a href="../contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+            <div class="nav-mobile">
+                <a href="../profil.html" class="profil">Mon profil</a>
+                <a href="../projets.html" class="project-page">Projets</a>
+                <a href="../contact.html" class="contact">Contact</a>
+            </div>
+        </header>
+        <main class="content">
+            <div class="presentation">
+                <h1 class="presentation-title">Alternance</h1>
+                <p class="presentation-subtitle">Mon projet pour 2024</p>
+            </div>
+            <div class="description">
+                <div class="description-left">
+                    <div class="description-picture-area">
+                        <img src="../img/lycee.jpg" class="description-picture">
+                    </div>
+                    <div class="description-filler"></div>
+                    <p class="description-info">
+                        Actuellement en deuxième année de BUT informatique dans l'IUT de Reims, je suis à la recherche d'une entreprise prête à
+                        m'embaucher en tant qu'alternant à partir de la rentrée 2024.<br>
+                        <br>
+                        Ce projet d'alternance est très important pour moi, car j'aspire à me professionnaliser tout en continuant mes études.
+                        L'alternance est pour moi une chance d'apprendre auprès d'employés compétents en situation réelle.<br>
+                        <br>
+                        Étudiant sérieux et curieux, je sais faire preuve de beaucoup d'implication dans mon travail.
+                        Si vous voulez en apprendre plus sur mon profil :<br>
+                        <a href="../profil.html" class="more-profil">Regarder mon profil</a>
+                    </p>
+                </div>
+                <div class="description-right">
+                    <p class="description-info">
+                        Curieux et créatif, j'ai découvert l'informatique au collège avec les bases de l'algorithmique sur mBlock.<br>
+                        Au lycée, j'ai découvert le langage de programmation Python que j'utilise encore beaucoup aujourd'hui.<br>
+                        Aujourd'hui, je continue mon BUT informatique en parcours DATA.<br>
+                        <br>
+                        Au cours de cette deuxième année, je vais effectuer un stage d'environ 2 mois en milieu professionnel.
+                        Je sais déjà que ce stage sera très enrichissant et qu'il ne sera qu'un avant-goût de ce qu'est l'apprentissage en alternance.<br>
+                        <br>
+                        Employeurs et recruteurs, si vous êtes intéressés par mon profil, vous pouvez me contacter avec le lien suivant :<br>
+                        <a href="../contact.html" class="more-contact">Me contacter</a>
+                    </p>
+                    <div class="description-filler"></div>
+                    <div class="description-picture-area">
+                        <img src="../img/iut.jpg" class="description-picture">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="../informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="../index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="../help.html" class="help">
+                    <img src="../img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+        </script>
+        <script src="../js/nav.js"></script>
+    </body>
+</html>

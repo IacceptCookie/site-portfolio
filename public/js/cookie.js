@@ -1,7 +1,11 @@
+/* Cookie consent banner variables */
 var cookieAccept = document.getElementsByClassName("cookie-consent-accept")[0];
 var cookieRefuse = document.getElementsByClassName("cookie-consent-refuse")[0];
 var cookieConsent = document.getElementsByClassName("cookie-consent")[0];
 
+/* Cookie getter, setter and deleter functions */
+
+  /* set a cookie. cname is the name of the cookie, cvalue is his value and exdays is the number of days before expiration date */
 function setCookie(cname, cvalue, exdays = null) {
   let expires = "";
   if (!(exdays === null)) {
@@ -12,6 +16,7 @@ function setCookie(cname, cvalue, exdays = null) {
   document.cookie = cname + "=" + cvalue + expires + ";path=/";
 }
 
+  /* get a cookie by his name and return his value. return "" if not found */
 function getCookie(cname) {
   let name = cname + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
@@ -28,29 +33,106 @@ function getCookie(cname) {
   return "";
 }
 
+  /* delete a cookie by replacing his expiration date by a past date */
 function delCookie(cname) {
   let cookie = getCookie(cname);
   document.cookie = cookie + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 }
 
-var userConsent = getCookie("session");
+/* Check if user has already answered the consent request */
+
+var userConsent = getCookie("consent");
 
 if (userConsent === "") {
     cookieConsent.style.display = "flex";
 }
 
+/* here we handle the consent request */
+
 cookieAccept.addEventListener("click", function () {
     
     cookieConsent.style.display = "none";
-    setCookie("session", "accept", 360);
+    setCookie("consent", "accept", 360);
 
 });
 
 cookieRefuse.addEventListener("click", function () {
     
     cookieConsent.style.display = "none";
-    setCookie("session", "refuse");
+    setCookie("consent", "refuse");
     delCookie("language")
 });
 
-var userLang = navigator.language || navigator.userLanguage;
+/* we handle the language of the website based on the user "language" cookie */ 
+
+  /* check user language, if not found, pick the navigator default language */
+var userLang = getCookie("language");
+
+if (userLang === "") {
+  var userLang = navigator.language || navigator.userLanguage;
+  var userLang = userLang.slice(0,2);
+}
+
+
+  /* if the user language doesn't match the available language list, set the user language to english */
+/*
+if ((userLang === "") || !(userLang in ["fr", "en"])) {
+  userLang = "en";
+}
+*/
+
+  /* redirect the user if hasn't the good language */
+if (userLang === "en") {
+  if (document.documentElement.lang === "fr") {
+    window.location.href = "en" + window.location.pathname;
+  }
+} else if (userLang === "fr") {
+  if (document.documentElement.lang === "en") {
+    window.location.href = ".." + window.location.pathname;
+  }
+}
+
+/* if the user change the language, he is redirected and get a cookie if he accept them */
+var enList = document.getElementsByClassName("en");
+
+enList[0].addEventListener("click", function () {
+
+  if (userConsent === "accept") {
+    setCookie("language", "en", 360);
+  }
+  if (document.documentElement.lang === "fr") {
+    window.location.href = "en" + window.location.pathname;
+  }
+});
+
+enList[1].addEventListener("click", function () {
+
+  if (userConsent === "accept") {
+    setCookie("language", "en", 360);
+  }
+  if (document.documentElement.lang === "fr") {
+    window.location.href = "en" + window.location.pathname;
+  }
+});
+
+var frList = document.getElementsByClassName("fr");
+
+frList[0].addEventListener("click", function () {
+
+  if (userConsent === "accept") {
+    setCookie("language", "fr", 360);
+  }
+  if (document.documentElement.lang === "en") {
+    window.location.href = ".." + window.location.pathname;
+  }
+});
+
+enList[1].addEventListener("click", function () {
+
+  if (userConsent === "accept") {
+    setCookie("language", "en", 360);
+  }
+  if (document.documentElement.lang === "en") {
+    window.location.href = ".." + window.location.pathname;
+  }
+});

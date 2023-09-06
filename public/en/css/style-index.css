@@ -17,7 +17,6 @@ body {
     box-sizing: border-box;
     background-color: #080957;
     box-shadow: 0px 5px 5px #7577cd;
-    align-items: center;
 }
 
 .logo-area {
@@ -33,7 +32,7 @@ body {
     text-decoration: none;
     margin-left: 3%;
     width: 225px;
-    height: 55px;
+    height: auto;
 }
 
 .logo-large {
@@ -48,72 +47,15 @@ body {
     height: auto;
 }
 
-.select-language {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    cursor: pointer;
-}
-
-.selected-language {
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.selected-language i {
-    margin-left: 5px;
-}
-
-.language-list {
-    position: absolute;
-    flex-direction: column;
-    top: 100%;
-    left: 0;
-    display: none;
-    width: 100%;
-    background-color: #080957;
-    border: 1px solid #7577cd;
-}
-
-.language {
-    text-align: center;
-    padding: 3%;
-    cursor: pointer;
-}
-
-.language:hover {
-    background-color: #7577cd;
-}
-
-.fr::before {
-    background-image: url(../img/fr.png);
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.en::before {
-    background-image: url(../img/us.png);
-    content: '';
-    display: inline-block;
-    align-self: center;
-    width: 30px;
-    height: 16px;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
 .nav {
     display: flex;
     flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.blank {
+    display: flex;
     box-sizing: border-box;
     flex: 1;
 }
@@ -123,7 +65,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     box-sizing: border-box;
-    flex: 3;
+    flex: 1.5;
 }
 
 .nav-hamburger {
@@ -510,6 +452,10 @@ body {
 
 
 @media only screen and (max-width: 1000px) {
+    .logo {
+        width: 250px;
+    }
+
     .nav-list {
         flex: 8;
     }
@@ -536,6 +482,10 @@ body {
         flex-direction: column;
     }
 
+    .blank {
+        flex: none;
+    }
+
     .nav-list {
         flex: 1;
     }
@@ -557,7 +507,6 @@ body {
 @media only screen and (max-width: 600px) {
     .header {
         flex-direction: column;
-        align-items: unset;
     }
 
     .logo-large {
@@ -581,7 +530,7 @@ body {
     }
 
     .logo {
-        max-width: 55px;
+        max-width: 80px;
     }
 
     .sticky + .content {

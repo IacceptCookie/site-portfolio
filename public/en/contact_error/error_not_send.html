@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Erreur : non envoyé</title>
+        <link rel="stylesheet" href="style_contact_error.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header" id="myHeader">
+            <div class="logo-area">
+                <a href="../index.html" class="logo">
+                    <img class="logo-large" src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                    <img class="logo-mobile" src="../img/logo/logo-only.png" alt="logo">
+                </a>
+                <button class="nav-hamburger">
+                    <img src="../img/hamburger.png">
+                </button>
+            </div>
+            <div class="nav">
+                <div class="blank"></div>
+                <div class="nav-list">
+                    <a href="../profil.html" class="profil">Mon profil</a>
+                    <a href="../projets.html" class="project-page">Projets</a>
+                    <a href="../contact.html" class="contact">Contact</a>
+                </div>
+            </div>
+            <div class="nav-mobile">
+                <a href="../profil.html" class="profil">Mon profil</a>
+                <a href="../projets.html" class="project-page">Projets</a>
+                <a href="../contact.html" class="contact">Contact</a>
+            </div>
+        </header>
+        <main class="content">
+            <h1 class="title">Oups... il semblerai qu'il y ait eu une erreur lors de l'envoi du formulaire</h1>
+            <p class="text">Vous pouvez réessayez ici :</p>
+            <a href="../contact.html" class="contact-redirect">Réessayer</a>
+            <p class="text">
+                Si le problème persiste, vous pouvez envoyer un message <br> à contact@raphael-durand.fr
+            </p>
+            <div class="fill"></div>
+        </main>
+        <footer class="footer">
+            <div class="links">
+                <a href="../informations.html">A propos</a>
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
+            </div>
+            <div class="adress-area">
+                <a href="../index.html" class="adress">www.raphael-durand.fr</a>
+            </div>
+            <div class="help-area">
+                <a href="../help.html" class="help">
+                    <img src="../img/bouee.png" alt="help">
+                </a>
+            </div>
+        </footer>
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+        <script src="../js/nav.js"></script>
+    </body>
+</html>
