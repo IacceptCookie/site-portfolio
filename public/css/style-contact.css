@@ -35,8 +35,14 @@ body {
     height: auto;
 }
 
-.logo>img {
+.logo-large {
     display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.logo-mobile {
+    display: none;
     width: 100%;
     height: auto;
 }
@@ -62,6 +68,56 @@ body {
     flex: 1.5;
 }
 
+.nav-hamburger {
+    display: none;
+    max-width: 60px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.nav-hamburger>img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-mobile {
+    display: none;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: 0.3s;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.nav-mobile>* {
+    font-family: Century Gothic;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 3%;
+    color: white;
+}
+
+.nav-mobile>*:hover {
+    background-color: #7577cd;
+    transition: 0.3s;
+}
+
+.nav-list>* {
+    font-family: Century Gothic;
+    font-weight: bold;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 20px;
+    padding: 3%;
+    color: white;
+}
+
 .nav-list>* {
     font-family: Century Gothic;
     font-weight: bold;
@@ -78,19 +134,16 @@ body {
 }
 
 .profil {
-    display: flex;
     box-sizing: border-box;
     text-decoration: none;
 }
 
 .project-page {
-    display: flex;
     box-sizing: border-box;
     text-decoration: none;
 }
 
 .contact {
-    display: flex;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -324,12 +377,36 @@ body {
         flex-direction: column;
     }
 
+    .logo-large {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: flex;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
+
+    .logo {
+        max-width: 80px;
+    }
+
     .sticky + .content {
         padding-top: 105px;
     }
 
     .logo-area {
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .adress {
