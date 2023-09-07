@@ -17,6 +17,7 @@ body {
     box-sizing: border-box;
     background-color: #080957;
     box-shadow: 0px 5px 5px #7577cd;
+    align-items: center;
 }
 
 .logo-area {
@@ -32,7 +33,7 @@ body {
     text-decoration: none;
     margin-left: 3%;
     width: 225px;
-    height: auto;
+    height: 55px;
 }
 
 .logo-large {
@@ -47,15 +48,72 @@ body {
     height: auto;
 }
 
+.select-language {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.selected-language {
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected-language i {
+    margin-left: 5px;
+}
+
+.language-list {
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    background-color: #080957;
+    border: 1px solid #7577cd;
+}
+
+.language {
+    text-align: center;
+    padding: 3%;
+    cursor: pointer;
+}
+
+.language:hover {
+    background-color: #7577cd;
+}
+
+.fr::before {
+    background-image: url(../img/fr.png);
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.en::before {
+    background-image: url(../img/us.png);
+    content: '';
+    display: inline-block;
+    align-self: center;
+    width: 30px;
+    height: 16px;
+    margin-right: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .nav {
     display: flex;
     flex-direction: row;
-    box-sizing: border-box;
-    flex: 1;
-}
-
-.blank {
-    display: flex;
     box-sizing: border-box;
     flex: 1;
 }
@@ -65,7 +123,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     box-sizing: border-box;
-    flex: 1.5;
+    flex: 3;
 }
 
 .nav-hamburger {
@@ -154,7 +212,6 @@ body {
     justify-content: center;
     flex: 1;
     box-sizing: border-box;
-    padding: 1%;
 }
 
 .sticky {
@@ -167,27 +224,11 @@ body {
     padding-top: 50px;
 }
 
-.terms-of-use {
-    display: flex;
-    max-width: 1000px;
-    flex-direction: column;
-    align-self: center;
-    padding: 1%;
-}
-
-.terms-of-use>* {
-    font-family: Roboto, sans-serif;
-}
-
-.contact-link {
-    color: black;
-}
-
 .fill {
     height: 20px;
-    display: flex;
     flex: 1;
 }
+
 
 .footer {
     display: flex;
@@ -275,11 +316,62 @@ body {
     height: auto;
 }
 
-@media only screen and (max-width: 1000px) {
-    .logo {
-        width: 250px;
-    }
+.cookie-consent {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: rgba(117, 119, 205, 0.9);
+    z-index: 1;
+    position: sticky;
+    bottom: 0;
+}
 
+.cookie-consent-info {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.cookie-consent-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cookie-consent-check>button {
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cookie-consent-accept {
+    background-color: #08832d;
+}
+
+.cookie-consent-accept:hover {
+    background-color: #17a843;
+}
+
+.cookie-consent-refuse {
+    background-color: #be1313;
+}
+
+.cookie-consent-refuse:hover {
+    background-color: #e42828;
+}
+
+@media only screen and (max-width: 1000px) {
     .nav-list {
         flex: 8;
     }
@@ -287,23 +379,33 @@ body {
     .adress-area {
         flex: 2;
     }
+
+    .nav {
+        flex: 2;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-    .blank {
-        flex: none;
-    }
-
     .nav-list {
         flex: 1;
+    }
+
+    .cookie-consent {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .cookie-consent-info {
+        text-align: center;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .header {
         flex-direction: column;
+        align-items: unset;
     }
-
+    
     .logo-large {
         display: none;
     }
@@ -325,15 +427,15 @@ body {
     }
 
     .logo {
-        max-width: 80px;
-    }
-
-    .sticky + .content {
-        padding-top: 105px;
+        max-width: 55px;
     }
 
     .logo-area {
         justify-content: space-between;
+    }
+
+    .sticky + .content {
+        padding-top: 105px;
     }
 
     .adress {

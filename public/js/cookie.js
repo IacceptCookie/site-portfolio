@@ -73,66 +73,78 @@ if (userLang === "") {
   var userLang = userLang.slice(0,2);
 }
 
+  /* redirect the user if he hasn't the good language, except if he just changed the language */
+var params = new URLSearchParams(location.search);
 
-  /* if the user language doesn't match the available language list, set the user language to english */
-/*
-if ((userLang === "") || !(userLang in ["fr", "en"])) {
-  userLang = "en";
+if (!params.get('redirected')) {
+  if (userLang === "en") {
+    if (document.documentElement.lang === "fr") {
+      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = "en" + "/index.html" + "?redirected=true";
+    }
+  } else if (userLang === "fr") {
+    if (document.documentElement.lang === "en") {
+      window.location.href = "../" + window.location.pathname + "?redirected=true";
+      window.location.href = ".." + "/index.html" + "?redirected=true";
+    }
+  } else if (!document.documentElement.lang === "en") {
+    window.location.href = "en" + window.location.pathname + "?redirected=true";
+    window.location.href = "en" + "/index.html" + "?redirected=true";
 }
-*/
-
-  /* redirect the user if hasn't the good language */
-if (userLang === "en") {
-  if (document.documentElement.lang === "fr") {
-    window.location.href = "en" + window.location.pathname;
-  }
-} else if (userLang === "fr") {
-  if (document.documentElement.lang === "en") {
-    window.location.href = ".." + window.location.pathname;
-  }
 }
 
 /* if the user change the language, he is redirected and get a cookie if he accept them */
-var enList = document.getElementsByClassName("en");
+var enList = document.getElementsByClassName("language en");
+var frList = document.getElementsByClassName("language fr");
 
-enList[0].addEventListener("click", function () {
+if (enList.length == 2) {
+  enList[0].addEventListener("click", function () {
 
-  if (userConsent === "accept") {
-    setCookie("language", "en", 360);
-  }
-  if (document.documentElement.lang === "fr") {
-    window.location.href = "en" + window.location.pathname;
-  }
-});
+    userConsent = getCookie("consent");
+    if (userConsent === "accept") {
+      setCookie("language", "en", 360);
+    }
+    if (document.documentElement.lang === "fr") {
+      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = "en" + "/index.html" + "?redirected=true";
+    }
+  });
 
-enList[1].addEventListener("click", function () {
+  enList[1].addEventListener("click", function () {
 
-  if (userConsent === "accept") {
-    setCookie("language", "en", 360);
-  }
-  if (document.documentElement.lang === "fr") {
-    window.location.href = "en" + window.location.pathname;
-  }
-});
+    userConsent = getCookie("consent");
+    if (userConsent === "accept") {
+      setCookie("language", "en", 360);
+    }
+    if (document.documentElement.lang === "fr") {
+      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = "en" + "/index.html" + "?redirected=true";
+    }
+  });
+}
 
-var frList = document.getElementsByClassName("fr");
+if (frList.length == 2) {
+  frList[0].addEventListener("click", function () {
 
-frList[0].addEventListener("click", function () {
+    userConsent = getCookie("consent");
+    if (userConsent === "accept") {
+      setCookie("language", "fr", 360);
+    }
+    if (document.documentElement.lang === "en") {
+      window.location.href = ".." + window.location.pathname + "?redirected=true";
+      window.location.href = ".." + "/index.html" + "?redirected=true";
+    }
+  });
 
-  if (userConsent === "accept") {
-    setCookie("language", "fr", 360);
-  }
-  if (document.documentElement.lang === "en") {
-    window.location.href = ".." + window.location.pathname;
-  }
-});
+  frList[1].addEventListener("click", function () {
 
-enList[1].addEventListener("click", function () {
-
-  if (userConsent === "accept") {
-    setCookie("language", "en", 360);
-  }
-  if (document.documentElement.lang === "en") {
-    window.location.href = ".." + window.location.pathname;
-  }
-});
+    userConsent = getCookie("consent");
+    if (userConsent === "accept") {
+      setCookie("language", "fr", 360);
+    }
+    if (document.documentElement.lang === "en") {
+      window.location.href = ".." + window.location.pathname + "?redirected=true";
+      window.location.href = ".." + "/index.html" + "?redirected=true";
+    }
+  });
+}

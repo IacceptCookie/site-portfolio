@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Projets</title>
         <link rel="stylesheet" href="css/style-projets.css">
+        <link rel="stylesheet" href="css/style-common.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
     </head>
     <body>
@@ -19,15 +21,32 @@
                 </button>
             </div>
             <div class="nav">
-                <div class="blank"></div>
                 <div class="nav-list">
-                    <a href="profil.html" class="profil">Mon profil</a>
+                    <div class="select-language">
+                        <div class="selected-language fr">
+                            Français
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="language-list">
+                            <div class="language en">English</div>
+                        </div>
+                    </div>
+                    <a href="profil.html" class="profil">Profil</a>
                     <a href="projets.html" class="project-page">Projets</a>
                     <a href="contact.html" class="contact">Contact</a>
                 </div>
             </div>
             <div class="nav-mobile">
-                <a href="profil.html" class="profil">Mon profil</a>
+                <div class="select-language">
+                    <div class="selected-language fr">
+                        Français
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="language-list">
+                        <div class="language en">English</div>
+                    </div>
+                </div>
+                <a href="profil.html" class="profil">Profil</a>
                 <a href="projets.html" class="project-page">Projets</a>
                 <a href="contact.html" class="contact">Contact</a>
             </div>
@@ -102,20 +121,17 @@
                 </a>
             </div>
         </footer>
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-              } else {
-                header.classList.remove("sticky");
-              }
-            }
-        </script>
+        <div class="cookie-consent">
+            <p class="cookie-consent-info">
+                Ce site utilise des cookies internes pour conserver vos préférences (choix de langue). <br>
+                Nous n'utilisons pas de cookies tiers et les cookies ne sont pas utilisés à des fins commerciales.
+            </p>
+            <div class="cookie-consent-check">
+                <button class="cookie-consent-refuse">Je refuse</button>
+                <button class="cookie-consent-accept">J'accepte</button>
+            </div>
+        </div>
         <script src="js/nav.js"></script>
+        <script src="js/cookie.js"></script>
     </body>
 </html>

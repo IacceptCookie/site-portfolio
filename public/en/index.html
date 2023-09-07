@@ -1,34 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bienvenue</title>
-        <link rel="stylesheet" href="css/style-index.css">
-        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="../css/style-index.css">
+        <link rel="stylesheet" href="../css/style-common.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
     </head>
     <body>
         <header class="header" id="myHeader">
             <div class="logo-area">
                 <a href="index.html" class="logo">
-                    <img class="logo-large" src="img/logo/facebook_cover_photo_1.png" alt="logo">
-                    <img class="logo-mobile" src="img/logo/logo-only.png" alt="logo">
+                    <img class="logo-large" src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                    <img class="logo-mobile" src="../img/logo/logo-only.png" alt="logo">
                 </a>
                 <button class="nav-hamburger">
-                    <img src="img/hamburger.png">
+                    <img src="../img/hamburger.png">
                 </button>
             </div>
             <div class="nav">
-                <div class="blank"></div>
                 <div class="nav-list">
-                    <a href="profil.html" class="profil">Mon profil</a>
-                    <a href="projets.html" class="project-page">Projets</a>
+                    <div class="select-language">
+                        <div class="selected-language en">
+                            English
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="language-list">
+                            <div class="language fr french">Français</div>
+                        </div>
+                    </div>
+                    <a href="profil.html" class="profil">Profile</a>
+                    <a href="projets.html" class="project-page">Projects</a>
                     <a href="contact.html" class="contact">Contact</a>
                 </div>
             </div>
             <div class="nav-mobile">
-                <a href="profil.html" class="profil">Mon profil</a>
-                <a href="projets.html" class="project-page">Projets</a>
+                <div class="select-language">
+                    <div class="selected-language en">
+                        English
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="language-list">
+                        <div class="language fr">Français</div>
+                    </div>
+                </div>
+                <a href="profil.html" class="profil">Profile</a>
+                <a href="projets.html" class="project-page">Projects</a>
                 <a href="contact.html" class="contact">Contact</a>
             </div>
         </header>
@@ -36,62 +55,62 @@
             <div class="presentation">
                 <div class="presentation-info">
                     <p>
-                        Je m’appelle Raphaël DURAND, 
-                        je suis étudiant en informatique à l'IUT de Reims Champagne-Ardenne. 
-                        J’ai développé ce site internet pour mettre en valeur mes différents projets en cours et futurs, 
-                        ainsi que promouvoir mon profil professionnel.
+                        My name is Raphaël DURAND. 
+                        I am a student in computer science at the University Institute of Technology of Reims Champagne-Ardenne. 
+                        I developed this website to show my current and future projects, 
+                        and to promote my professional profile.
                     </p>
                 </div>
                 <div class="presentation-picture">
-                    <img src="img/workinprogress.jpg" alt="photo">
+                    <img src="../img/workinprogress.jpg" alt="photo">
                 </div>
             </div>
             <div class="projects-area">
-                <h1 class="projects-title">Mes projets en cours</h1>
+                <h1 class="projects-title">My current projects</h1>
                 <div class="projects-view">
                     <a href="project/alternance.html" class="project">
                         <div class="alter">
                             <div class="content-project">
-                                <h1>Alternance
+                                <h1>Cooperative training course
                                 </h1>
                             </div>
                         </div>
                         <p>
-                            Dans mes études, 
-                            j’aimerais pouvoir suivre une formation en alternance dans une entreprise
-                            dont les domaines d'action sont pertinents et correspondent à mon domaine d'études.
-                            Dans le cadre de ma formation (BUT informatique),
-                            je suis le parcours DATA qui s’intéresse à la gestion
-                            et à l’utilisation des données dans différents moyens d’applications…
+                            In my studies, 
+                            I'd like to be able to take a cooperative training course with a company
+                            whose areas of activity are relevant and correspond to my field of study.
+                            As part of my training (Bachelor's degree in computer science),
+                            I'm taking the DATA course, which focuses on the management
+                            and use of data in different applications...
                         </p>
                     </a>
                     <a href="project/sound.html" class="project">
                         <div class="sound">
                             <div class="content-project">
-                                <h1>Reconnaissance Vocale
+                                <h1>Voice Recognition
                                 </h1>
                             </div>
                         </div>
                         <p>
-                            Un projet personnel qui me tient à cœur est la réalisation d’un logiciel de reconnaissance vocale.
-                            Bien que cette fonctionnalité soit déjà intégrée dans des produits d'entreprises telles que Google et Microsoft,
-                            j'aimerais travailler sur ce projet afin de concrétiser un autre projet plus ambitieux :
-                            la réalisation d'un chatbot vocal…
+                            A personal project that means a lot for me is the development of a voice recognition software.
+                            Although this feature is already integrated in products of companies like Google and Microsoft,
+                            I would like to work on this project to achieve a more ambitious one:
+                            the creation of a vocal chatbot...
                         </p>
                     </a>
                     <a href="project/website.html" class="project">
                         <div class="website">
                             <div class="content-project">
-                                <h1>Site Internet
+                                <h1>Website
                                 </h1>
                             </div>
                         </div>
                         <p>
-                            Ce projet concerne la réalisation du site internet actuel,
-                            qui est actuellement en développement et sera amélioré.
-                            Le site suit un format de portfolio qui présente à la fois mon profil 
-                            et les projets sur lesquels je travaille actuellement. 
-                            Il présentera également les projets achevés au moment opportun…
+                            This project is about the achievement of this website,
+                            which is currently in development and will be upgraded.
+                            The website follows the idea of a portfolio, which present at the same time my profile 
+                            and the projects I'm currently working on.
+                            Later, he will also show my finished projects...
                         </p>
                     </a>
                 </div>
@@ -100,7 +119,7 @@
         </main>
         <footer class="footer">
             <div class="links">
-                <a href="informations.html">A propos</a>
+                <a href="informations.html">About</a>
                 <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
             </div>
             <div class="adress-area">
@@ -108,21 +127,21 @@
             </div>
             <div class="help-area">
                 <a href="help.html" class="help">
-                    <img src="img/bouee.png" alt="help">
+                    <img src="../img/bouee.png" alt="help">
                 </a>
             </div>
         </footer>
         <div class="cookie-consent">
             <p class="cookie-consent-info">
-                Ce site utilise des cookies internes pour conserver vos préférences (choix de langue). <br>
-                Nous n'utilisons pas de cookies tiers et les cookies ne sont pas utilisés à des fins commerciales.
+                This site uses internal cookies to store your preferences (language selection). <br>
+                We do not use third-party cookies, and cookies are not used for commercial purposes.
             </p>
             <div class="cookie-consent-check">
-                <button class="cookie-consent-refuse">Je refuse</button>
-                <button class="cookie-consent-accept">J'accepte</button>
+                <button class="cookie-consent-refuse">I refuse</button>
+                <button class="cookie-consent-accept">I accept</button>
             </div>
         </div>
-        <script src="js/nav.js"></script>
-        <script src="js/cookie.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/cookie.js"></script>
     </body>
 </html>

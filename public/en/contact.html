@@ -1,58 +1,77 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Me contacter</title>
-        <link rel="stylesheet" href="css/style-contact.css">
-        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+        <title>Contact me</title>
+        <link rel="stylesheet" href="../css/style-contact.css">
+        <link rel="stylesheet" href="../css/style-common.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
     </head>
     <body>
         <header class="header" id="myHeader">
             <div class="logo-area">
                 <a href="index.html" class="logo">
-                    <img class="logo-large" src="img/logo/facebook_cover_photo_1.png" alt="logo">
-                    <img class="logo-mobile" src="img/logo/logo-only.png" alt="logo">
+                    <img class="logo-large" src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                    <img class="logo-mobile" src="../img/logo/logo-only.png" alt="logo">
                 </a>
                 <button class="nav-hamburger">
-                    <img src="img/hamburger.png">
+                    <img src="../img/hamburger.png" alt="menu">
                 </button>
             </div>
             <div class="nav">
-                <div class="blank"></div>
                 <div class="nav-list">
-                    <a href="profil.html" class="profil">Mon profil</a>
-                    <a href="projets.html" class="project-page">Projets</a>
+                    <div class="select-language">
+                        <div class="selected-language en">
+                            English
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="language-list">
+                            <div class="language fr">Français</div>
+                        </div>
+                    </div>
+                    <a href="profil.html" class="profil">Profile</a>
+                    <a href="projets.html" class="project-page">Projects</a>
                     <a href="contact.html" class="contact">Contact</a>
                 </div>
             </div>
             <div class="nav-mobile">
-                <a href="profil.html" class="profil">Mon profil</a>
-                <a href="projets.html" class="project-page">Projets</a>
+                <div class="select-language">
+                    <div class="selected-language en">
+                        English
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="language-list">
+                        <div class="language fr">Français</div>
+                    </div>
+                </div>
+                <a href="profil.html" class="profil">Profile</a>
+                <a href="projets.html" class="project-page">Projects</a>
                 <a href="contact.html" class="contact">Contact</a>
             </div>
         </header>
         <main class="content">
-        <h1 class="contact-title">Pour me contacter</h1>
-        <form action="contact.php" id="contact" name="contact" class="contact-form" method="post">
-            <input type="text" name="name" placeholder="Nom" class="form-name" required>
-            <input type="text" name="surname" placeholder="Prénom" class="form-surname" required>
+        <h1 class="contact-title">To contact me</h1>
+        <form action="../contact.php" id="contact" name="contact" class="contact-form" method="post">
+            <input type="text" name="name" placeholder="Name" class="form-name" required>
+            <input type="text" name="surname" placeholder="Surname" class="form-surname" required>
             <input type="email" name="email" placeholder="Email" class="form-email" required>
             <textarea name="message" placeholder="Message" class="form-message" form="contact" required></textarea>
             <label for="cgu" class="form-cgu-label">
                 <input type="checkbox" name="cgu" id="cgu" class="form-cgu" required>
-                J'ai pris connaissance et j'accepte les <a href="informations.html">conditions générales d'utilisation</a>
+                I read and I accept the <a href="informations.html">terms and conditions of use</a>
             </label>
-            <button type="submit" class="form-submit">Envoyer</button>
+            <button type="submit" class="form-submit">Send</button>
         </form>
-        <p class="warning">Merci de ne pas déposer de spam/pubs, contact professionnel uniquement.
-            Tout message inapproprié ne sera pas traité. En complétant ce formulaire, vous consentez à communiquer
-            les informations demandées. Ces dernières ne sont pas collectées dans un but commercial.</p>
+        <p class="warning">Please do not leave spams/advertisements, professional contact only.
+            Inappropriate messages will not be processed. By filling this form, you consent to communicate
+            the requested informations. These are not collected for advertising purposes.</p>
         <div class="fill"></div>
         </main>
         <footer class="footer">
             <div class="links">
-                <a href="informations.html">A propos</a>
+                <a href="informations.html">About</a>
                 <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
             </div>
             <div class="adress-area">
@@ -60,24 +79,21 @@
             </div>
             <div class="help-area">
                 <a href="help.html" class="help">
-                    <img src="img/bouee.png" alt="help">
+                    <img src="../img/bouee.png" alt="help">
                 </a>
             </div>
         </footer>
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-              } else {
-                header.classList.remove("sticky");
-              }
-            }
-        </script>
-        <script src="js/nav.js"></script>
+        <div class="cookie-consent">
+            <p class="cookie-consent-info">
+                This site uses internal cookies to store your preferences (language selection). <br>
+                We do not use third-party cookies, and cookies are not used for commercial purposes.
+            </p>
+            <div class="cookie-consent-check">
+                <button class="cookie-consent-refuse">Je refuse</button>
+                <button class="cookie-consent-accept">J'accepte</button>
+            </div>
+        </div>
+        <script src="../js/nav.js"></script>
+        <script src="../js/cookie.js"></script>
     </body>
 </html>

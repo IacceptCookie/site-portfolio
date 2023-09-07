@@ -1,106 +1,126 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Assistance</title>
-        <link rel="stylesheet" href="css/style-help.css">
+        <title>Help</title>
+        <link rel="stylesheet" href="../css/style-help.css">
+        <link rel="stylesheet" href="../css/style-common.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="img/logo/favicon.png" type="image/x-icon">
+        <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
     </head>
     <body>
         <header class="header" id="myHeader">
             <div class="logo-area">
                 <a href="index.html" class="logo">
-                    <img class="logo-large" src="img/logo/facebook_cover_photo_1.png" alt="logo">
-                    <img class="logo-mobile" src="img/logo/logo-only.png" alt="logo">
+                    <img class="logo-large" src="../img/logo/facebook_cover_photo_1.png" alt="logo">
+                    <img class="logo-mobile" src="../img/logo/logo-only.png" alt="logo">
                 </a>
                 <button class="nav-hamburger">
-                    <img src="img/hamburger.png">
+                    <img src="../img/hamburger.png">
                 </button>
             </div>
             <div class="nav">
-                <div class="blank"></div>
                 <div class="nav-list">
-                    <a href="profil.html" class="profil">Mon profil</a>
-                    <a href="projets.html" class="project-page">Projets</a>
+                    <div class="select-language">
+                        <div class="selected-language en">
+                            English
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                        <div class="language-list">
+                            <div class="language fr french">Français</div>
+                        </div>
+                    </div>
+                    <a href="profil.html" class="profil">Profile</a>
+                    <a href="projets.html" class="project-page">Projects</a>
                     <a href="contact.html" class="contact">Contact</a>
                 </div>
             </div>
             <div class="nav-mobile">
-                <a href="profil.html" class="profil">Mon profil</a>
-                <a href="projets.html" class="project-page">Projets</a>
+                <div class="select-language">
+                    <div class="selected-language en">
+                        English
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="language-list">
+                        <div class="language fr">Français</div>
+                    </div>
+                </div>
+                <a href="profil.html" class="profil">Profile</a>
+                <a href="projets.html" class="project-page">Projects</a>
                 <a href="contact.html" class="contact">Contact</a>
             </div>
         </header>
         <main class="content">
-            <h1 class="title">Besoin d'aide pour se repérer ?</h1>
+            <h1 class="title">Need help to find your way?</h1>
             <div class="faq">
                 <button class="question">
-                    Où puis-je en apprendre davantage sur ton profil ?
+                    Where can i learn more about your profile?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Toutes les informations concernant mon profil professionnelles sont dans la page <a href="profil.html" class="more-profil">Mon Profil</a>. <br>
-                        Vous y retrouverez entre autres mon CV et ainsi que mon cursus.
+                        Every informations about my professional profile are in the <a href="profil.html" class="more-profil">Profil</a> page. <br>
+                        You will find, among others, my CV and my cursus.
                     </p>
                 </div>
                 <button class="question">
-                    Où puis-je télécharger ton curriculum vitae (CV) ?
+                    Where can I download your curriculum vitae (CV)?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Mon curriculum vitae est disponible dans la page <a href="profil.html" class="more-profil">Mon Profil</a>.
+                        My curriculum vitae is available in the <a href="profil.html" class="more-profil">Profil</a> page.
                     </p>
                 </div>
                 <button class="question">
-                    Où sont les Conditions Générales d'Utilisation (CGU) ?
+                    Where are the terms of use?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Les CGU sont disponibles dans l'onglet <a href="informations.html" class="more-informations">A Propos</a> en bas à gauche de la page.
+                        The terms of use are available in the <a href="informations.html" class="more-informations">About</a> page
+                        at the left-bottom corner of this page.
                     </p>
                 </div>
                 <button class="question">
-                    Comment est-ce que je peux te contacter ?
+                    How can I contact you?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Il est possible de me contacter en remplissant le formulaire de contact dans l'onglet <a href="contact.html" class="more-contact">Contact</a>.
+                        It's possible to contact me by filling the contact form in the <a href="contact.html" class="more-contact">Contact</a> webpage.
                     </p>
                 </div>
                 <button class="question">
-                    Que deviennent mes données après avoir utilisé le formulaire de contact ?
+                    What happens to my personal data after sending the contact form?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Les données demandées dans le formulaire de contact me permettent de répondre à votre message. Ces données ne sont stockées que jusqu'à ce que le message
-                        soit traité. En aucun cas, vos données ne sont ni revendues ni utilisées à des fins commerciales. 
+                        In the contact form, the requested data helps me to recontact you. This data are stored only until your request is processed. 
+                        Your data is never sold or used for commercial purposes. 
                     </p>
                 </div>
                 <button class="question">
-                    Ce site utilise-t-il des cookies ?
+                    Does this site use cookies?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Non, actuellement, ce site internet n'utilise pas de cookies.
+                        This site use cookies to store your preferences (Language, Consent about using cookies).
+                        We never use cookies for commercial purposes.
                     </p>
                 </div>
                 <button class="question">
-                    Puis-je réutiliser les photos présentent sur le site ?
+                    Can I use the photos on this website?
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <div class="answer">
                     <p class="answer-content">
-                        Certaines des photos sont libres de droits et d'autres appartiennent à leur auteur respectif (Moi y compris).<br>
-                        Pour utiliser ces photos, vous devez m'écrire via le <a href="contact.html" class="more-contact">formulaire de contact</a>
-                        avant de les utiliser pour ne pas violer la propriété intellectuelle.
+                        Some of the photos are copyright-free and others belong to their respective author (Me included).<br>
+                        To use this photos, you must ask me with the <a href="contact.html" class="more-contact">contact form</a>
+                        before using them to not violate the intellectual property right.
                     </p>
                 </div>
             </div>
@@ -108,7 +128,7 @@
         </main>
         <footer class="footer">
             <div class="links">
-                <a href="informations.html">A propos</a>
+                <a href="informations.html">About</a>
                 <a href="https://www.linkedin.com/in/rapha%C3%ABl-durand-386720267/" target="_blank">LinkedIn</a>
             </div>
             <div class="adress-area">
@@ -116,24 +136,21 @@
             </div>
             <div class="help-area">
                 <a href="help.html" class="help">
-                    <img src="img/bouee.png" alt="help">
+                    <img src="../img/bouee.png" alt="help">
                 </a>
             </div>
         </footer>
+        <div class="cookie-consent">
+            <p class="cookie-consent-info">
+                This site uses internal cookies to store your preferences (language selection). <br>
+                We do not use third-party cookies, and cookies are not used for commercial purposes.
+            </p>
+            <div class="cookie-consent-check">
+                <button class="cookie-consent-refuse">I refuse</button>
+                <button class="cookie-consent-accept">I accept</button>
+            </div>
+        </div>
         <script>
-            window.onscroll = function() {myFunction()};
-            
-            var header = document.getElementById("myHeader");
-            var sticky = header.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-              } else {
-                header.classList.remove("sticky");
-              }
-            }
-
             var question = document.getElementsByClassName("question");
             var i;
 
@@ -153,8 +170,8 @@
                 }
                 });
             }
-            
         </script>
-        <script src="js/nav.js"></script>
+        <script src="../js/nav.js"></script>
+        <script src="../js/cookie.js"></script>
     </body>
 </html>
