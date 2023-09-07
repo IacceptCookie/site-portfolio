@@ -11,12 +11,19 @@
     box-sizing: border-box;
     flex: 1;
     justify-content: center;
+    align-items: center;
 }
 
 .presentation-picture>img {
     display: flex;
-    padding: 1%;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
     box-sizing: border-box;
+    background-image: url(../img/fond-img.png);
+    background-size: 500px auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .presentation-info {
