@@ -63,6 +63,18 @@ cookieRefuse.addEventListener("click", function () {
     delCookie("language")
 });
 
+/* get current url domain and protocol only */
+var currentURL = window.location.href;
+var urlObject = new URL(currentURL);
+var protocol = urlObject.protocol;
+var port = urlObject.port;
+var domain = urlObject.hostname;
+if (port) {
+  domainWithProtocol = protocol + "//" + domain + ":" + port + "/";
+} else {
+  domainWithProtocol = protocol + "//" + domain + "/";
+}
+
 /* we handle the language of the website based on the user "language" cookie */ 
 
   /* check user language, if not found, pick the navigator default language */
@@ -79,14 +91,14 @@ var params = new URLSearchParams(location.search);
 if (!params.get('redirected')) {
   if (userLang === "en") {
     if (document.documentElement.lang === "fr") {
-      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = domainWithProtocol + "en" + window.location.pathname + "?redirected=true";
     }
   } else if (userLang === "fr") {
     if (document.documentElement.lang === "en") {
-      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
+      window.location.href = domainWithProtocol + window.location.pathname.slice(4) + "?redirected=true";
     }
   } else if (!document.documentElement.lang === "en") {
-    window.location.href = "en" + window.location.pathname + "?redirected=true";
+    window.location.href = domainWithProtocol + "en" + window.location.pathname + "?redirected=true";
 }
 }
 
@@ -102,7 +114,7 @@ if (enList.length == 2) {
       setCookie("language", "en", 360);
     }
     if (document.documentElement.lang === "fr") {
-      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = domainWithProtocol + "en" + window.location.pathname + "?redirected=true";
     }
   });
 
@@ -113,7 +125,7 @@ if (enList.length == 2) {
       setCookie("language", "en", 360);
     }
     if (document.documentElement.lang === "fr") {
-      window.location.href = "en" + window.location.pathname + "?redirected=true";
+      window.location.href = domainWithProtocol + "en" + window.location.pathname + "?redirected=true";
     }
   });
 }
@@ -126,7 +138,7 @@ if (frList.length == 2) {
       setCookie("language", "fr", 360);
     }
     if (document.documentElement.lang === "en") {
-      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
+      window.location.href = domainWithProtocol + window.location.pathname.slice(4) + "?redirected=true";
     }
   });
 
@@ -137,7 +149,7 @@ if (frList.length == 2) {
       setCookie("language", "fr", 360);
     }
     if (document.documentElement.lang === "en") {
-      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
+      window.location.href = domainWithProtocol + window.location.pathname.slice(4) + "?redirected=true";
     }
   });
 }
