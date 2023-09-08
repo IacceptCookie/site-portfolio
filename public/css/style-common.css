@@ -150,7 +150,7 @@ body {
 }
 
 .nav-mobile>* {
-    font-family: Century Gothic;
+    font-family: Trebuchet MS;
     font-weight: bold;
     width: 100%;
     text-align: center;
@@ -167,17 +167,7 @@ body {
 }
 
 .nav-list>* {
-    font-family: Century Gothic;
-    font-weight: bold;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 20px;
-    padding: 3%;
-    color: white;
-}
-
-.nav-list>* {
-    font-family: Century Gothic;
+    font-family: Trebuchet MS;
     font-weight: bold;
     flex-wrap: wrap;
     align-items: center;
@@ -257,7 +247,7 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: Century Gothic;
+    font-family: Trebuchet MS;
     font-weight: bold;
     color: white;
     width: max-content;
@@ -283,7 +273,7 @@ body {
     border-radius: 5px;
     padding: 1%;
     text-decoration: none;
-    font-family: Century Gothic;
+    font-family: Trebuchet MS;
     font-weight: bold;
     font-size: 24px;
     color: white;
