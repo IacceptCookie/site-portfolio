@@ -80,16 +80,13 @@ if (!params.get('redirected')) {
   if (userLang === "en") {
     if (document.documentElement.lang === "fr") {
       window.location.href = "en" + window.location.pathname + "?redirected=true";
-      window.location.href = "en" + "/index.html" + "?redirected=true";
     }
   } else if (userLang === "fr") {
     if (document.documentElement.lang === "en") {
-      window.location.href = "../" + window.location.pathname + "?redirected=true";
-      window.location.href = ".." + "/index.html" + "?redirected=true";
+      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
     }
   } else if (!document.documentElement.lang === "en") {
     window.location.href = "en" + window.location.pathname + "?redirected=true";
-    window.location.href = "en" + "/index.html" + "?redirected=true";
 }
 }
 
@@ -106,7 +103,6 @@ if (enList.length == 2) {
     }
     if (document.documentElement.lang === "fr") {
       window.location.href = "en" + window.location.pathname + "?redirected=true";
-      window.location.href = "en" + "/index.html" + "?redirected=true";
     }
   });
 
@@ -118,7 +114,6 @@ if (enList.length == 2) {
     }
     if (document.documentElement.lang === "fr") {
       window.location.href = "en" + window.location.pathname + "?redirected=true";
-      window.location.href = "en" + "/index.html" + "?redirected=true";
     }
   });
 }
@@ -131,8 +126,7 @@ if (frList.length == 2) {
       setCookie("language", "fr", 360);
     }
     if (document.documentElement.lang === "en") {
-      window.location.href = ".." + window.location.pathname + "?redirected=true";
-      window.location.href = ".." + "/index.html" + "?redirected=true";
+      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
     }
   });
 
@@ -143,8 +137,7 @@ if (frList.length == 2) {
       setCookie("language", "fr", 360);
     }
     if (document.documentElement.lang === "en") {
-      window.location.href = ".." + window.location.pathname + "?redirected=true";
-      window.location.href = ".." + "/index.html" + "?redirected=true";
+      window.location.href = window.location.pathname.slice(3) + "?redirected=true";
     }
   });
 }
