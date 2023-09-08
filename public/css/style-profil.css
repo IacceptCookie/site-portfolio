@@ -250,7 +250,7 @@
 
 @media only screen and (max-width: 800px) {
     .presentation {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .experience-left {
