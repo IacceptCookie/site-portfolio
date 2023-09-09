@@ -1,1 +1,321 @@
-.experience-title,.skills-title{font-size:40px;align-self:center}.experience-picture,.presentation-picture>img{background-repeat:no-repeat;background-position:center}.presentation{display:flex;flex-direction:row;box-sizing:border-box;flex:1}.presentation-info,.presentation-picture{display:flex;flex-direction:column;box-sizing:border-box}.presentation-picture{flex:1;justify-content:center;align-items:center}.presentation-picture>img{display:flex;height:auto;width:100%;max-width:500px;box-sizing:border-box;background-image:url(../img/fond-img.png);background-size:500px auto}.presentation-info{flex:1;justify-content:center}.skills-area,.skills>*{flex-direction:column;display:flex;box-sizing:border-box}.presentation-info>p{font-family:Roboto,sans-serif;font-size:28px;display:flex;align-self:center;text-align:center;padding:0 2%}.skills-area{justify-content:space-around;flex:1;background-color:#080957;padding:1%}.skills-title{color:#fff;font-family:Source Sans Pro,sans-serif;width:fit-content;padding:.5%}.downloadable-title,.experience-title{color:#000;font-family:Source Sans Pro,sans-serif;width:fit-content}.skills{display:flex;flex-direction:row;box-sizing:border-box;flex:1;border-radius:3px;flex-wrap:wrap}.skills>*{flex:1;padding:.5%;flex-basis:33%;margin-bottom:2%}.skills>*>h1{color:#fff;font-family:Source Sans Pro,sans-serif;font-size:28px;box-sizing:border-box;border-radius:3px;width:fit-content;padding:.5%}.skills>*>ul{box-sizing:border-box;color:#fff;font-family:Source Sans Pro,sans-serif;font-size:22px}.skills-left,.skills-middle{border-right:3px solid #7577cd}.experience{display:flex;flex-direction:column;box-sizing:border-box;flex:1}.experience-title{padding:.5%}.downloadable,.experience-info{box-sizing:border-box;padding:2%;display:flex}.experience-left,.experience-right{display:flex;flex:1;box-sizing:border-box;flex-direction:row;min-height:500px}.experience-left>.experience-picture-area{border-radius:0 100% 100% 0/0 70% 70% 0;padding:4% 2% 4% 0}.experience-left>.experience-picture-area>.experience-picture{border-radius:0 100% 100% 0/0 70% 70% 0}.experience-left>.experience-picture-area:hover{margin-right:2%}.experience-right>.experience-picture-area{border-radius:100% 0 0 100%/70% 0 0 70%;padding:4% 0 4% 2%}.experience-right>.experience-picture-area>.experience-picture{border-radius:100% 0 0 100%/70% 0 0 70%}.experience-right>.experience-picture-area:hover{margin-left:2%}.experience-picture-area{display:flex;flex:2;box-sizing:border-box;background-color:#080957;transition:.5s}.experience-picture-area:hover{padding:0}.experience-picture{display:flex;flex:1;box-sizing:border-box;background-size:cover}.experience-picture.lycee{background-image:url(../img/lycee.jpg)}.experience-picture.iut{background-image:url(../img/iut.jpg)}.experience-info{flex:5;background-color:#fff;box-shadow:0 0 10px 5px #c5c5c5;margin:5% 3%;border-radius:10px;font-family:Source Sans Pro,sans-serif;font-size:24px}.experience-info:hover{background-color:#dedede;transition:.3s}.downloadable{flex-direction:column;flex:1}.downloadable-title{display:flex;font-size:40px;padding:.5%;align-self:center;text-align:center}.download,.downloadable-picture{display:flex;padding:1%;box-sizing:border-box;align-self:center}.downloadable-picture{max-width:800px;width:100%;height:auto}.download{border-radius:10px;text-decoration:none;font-family:Century Gothic;font-weight:700;font-size:28px;color:#fff;background-color:#080957;width:fit-content}.download:hover{background-color:#0d0f80;transition:.3s}@media only screen and (max-width:800px){.experience-right,.presentation{flex-direction:column-reverse}.experience-left,.skills{flex-direction:column}.experience-picture-area{min-height:200px}.experience-left>.experience-picture-area,.experience-left>.experience-picture-area>.experience-picture,.experience-right>.experience-picture-area,.experience-right>.experience-picture-area>.experience-picture{border-radius:0}.experience-left>.experience-picture-area{padding-right:0}.experience-left>.experience-picture-area:hover,.experience-right>.experience-picture-area:hover{margin:0}.experience-right>.experience-picture-area{padding-left:0}.experience-info{flex:2}.downloadable-title,.experience-title,.skills-title{font-size:32px}.skills-left,.skills-middle{border-right:0px solid #7577cd}.download,.downloadable{padding:4%}}@media only screen and (max-width:400px){.experience-info{font-size:20px}.download{font-size:22px}}
+.presentation {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.presentation-picture {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation-picture>img {
+    display: flex;
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    background-image: url(../img/fond-img.webp);
+    background-size: 500px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.presentation-info {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+    justify-content: center;
+}
+
+.presentation-info>p {
+    font-family: Roboto, sans-serif;
+    font-size: 28px;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    padding: 0 2%;
+}
+
+.skills-area {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-around;
+    flex: 1;
+    background-color: #080957;
+    padding: 1%;
+}
+
+.skills-title {
+    color: white;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 40px;
+    width: fit-content;
+    padding: 0.5%;
+    align-self: center;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex: 1;
+    border-radius: 3px;
+    flex-wrap: wrap;
+}
+
+.skills>* {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 0.5%;
+    flex-basis: 33%;
+    margin-bottom: 2%;
+}
+
+.skills>*>h1 {
+    color: white;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 28px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 0.5%;
+}
+
+.skills>*>ul {
+    box-sizing: border-box;
+    color: white;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 22px;
+}
+
+.skills-left, .skills-middle {
+    border-right: solid #7577cd 3px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.experience-title {
+    color: black;
+    font-family: Source Sans Pro, sans-serif;
+    width: fit-content;
+    font-size: 40px;
+    padding: 0.5%;
+    align-self: center;
+}
+
+.experience-left, .experience-right {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    flex-direction: row;
+    min-height: 500px;
+}
+
+.experience-left>.experience-picture-area {
+    border-radius: 0 100% 100% 0/0 70% 70% 0;
+    padding: 4% 2% 4% 0;
+}
+
+.experience-left>.experience-picture-area>.experience-picture {
+    border-radius: 0 100% 100% 0/0 70% 70% 0;
+}
+
+.experience-left>.experience-picture-area:hover {
+    margin-right: 2%;
+}
+
+.experience-right>.experience-picture-area {
+    border-radius: 100% 0 0 100%/70% 0 0 70%;
+    padding: 4% 0 4% 2%;
+}
+
+.experience-right>.experience-picture-area>.experience-picture {
+    border-radius: 100% 0 0 100%/70% 0 0 70%;
+}
+
+.experience-right>.experience-picture-area:hover {
+    margin-left: 2%;
+}
+
+.experience-picture-area {
+    display: flex;
+    flex: 2;
+    box-sizing: border-box;
+    background-color: #080957;
+    transition: 0.5s;
+}
+
+.experience-picture-area:hover {
+    padding: 0;
+}
+
+.experience-picture {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.experience-picture.lycee {
+    background-image: url(../img/lycee.webp);
+}
+
+.experience-picture.iut {
+    background-image: url(../img/iut.webp);
+}
+
+.experience-info {
+    flex: 5;
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 0 10px 5px #C5C5C5;
+    margin: 5% 3%;
+    padding: 2%;
+    border-radius: 10px;
+    font-family: Source Sans Pro, sans-serif;
+    font-size: 24px;
+}
+
+.experience-info:hover {
+    background-color: #DEDEDE;
+    transition: 0.3s;
+}
+
+.downloadable {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 2%;
+}
+
+.downloadable-title {
+    display: flex;
+    color: black;
+    font-family: Source Sans Pro, sans-serif;
+    width: fit-content;
+    font-size: 40px;
+    padding: 0.5%;
+    align-self: center;
+    text-align: center;
+}
+
+.downloadable-picture {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 1%;
+    align-self: center;
+}
+
+.download {
+    display: flex;
+    padding: 1%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Century Gothic;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    background-color: #080957;
+    align-self: center;
+    width: fit-content;
+}
+
+.download:hover {
+    background-color: #0D0F80;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+    .presentation {
+        flex-direction: column-reverse;
+    }
+
+    .experience-left {
+        flex-direction: column;
+    }
+
+    .experience-right {
+        flex-direction: column-reverse;
+    }
+
+    .experience-picture-area {
+        min-height: 200px;
+    }
+
+    .experience-left>.experience-picture-area>.experience-picture, .experience-right>.experience-picture-area>.experience-picture {
+        border-radius: 0;
+    }
+
+    .experience-left>.experience-picture-area, .experience-right>.experience-picture-area {
+        border-radius: 0;
+    }
+
+    .experience-left>.experience-picture-area {
+        padding-right: 0;
+    }
+
+    .experience-left>.experience-picture-area:hover {
+        margin: 0;
+    }
+
+    .experience-right>.experience-picture-area {
+        padding-left: 0;
+    }
+
+    .experience-right>.experience-picture-area:hover {
+        margin: 0;
+    }
+
+    .experience-info {
+        flex: 2;
+    }
+
+    .skills-title, .experience-title, .downloadable-title {
+        font-size: 32px;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills-left, .skills-middle {
+        border-right: solid #7577cd 0px;
+    }
+
+    .downloadable,.download {
+        padding: 4%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .experience-info {
+        font-size: 20px;
+    }
+
+    .download {
+        font-size: 22px;
+    }
+}

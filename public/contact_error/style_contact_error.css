@@ -1,1 +1,56 @@
-.text,.title{font-family:Roboto,sans-serif}.contact-redirect,.text,.title{display:flex;box-sizing:border-box}.content{max-width:800px;width:100%;align-self:center}.title{justify-content:center;font-size:32px}.text{font-size:24px}.contact-redirect{padding:2%;border-radius:5px;border:3px solid #7577cd;text-decoration:none;font-family:Century Gothic,serif;font-weight:700;font-size:28px;color:#fff;background-color:#080957;width:fit-content;align-self:center;margin:10px 0}.contact-redirect:hover{background-color:#0d0f80;transition:.3s}@media only screen and (max-width:800px){.contact-redirect{font-size:20px}.title{font-size:24px}.text{font-size:18px}}
+.content {
+    max-width: 800px;
+    width: 100%;
+    align-self: center;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: Roboto, sans-serif;
+}
+
+.text {
+    display: flex;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+.contact-redirect {
+    display: flex;
+    padding: 2%;
+    border-radius: 5px;
+    border: #7577cd 3px solid;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Century Gothic, serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    background-color: #080957;
+    width: fit-content;
+    align-self: center;
+    margin: 10px 0;
+}
+
+.contact-redirect:hover {
+    background-color: #0D0F80;
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-redirect {
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
