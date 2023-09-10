@@ -129,6 +129,7 @@ body {
 .nav-hamburger {
     display: none;
     max-width: 48px;
+    margin-right: 5px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
