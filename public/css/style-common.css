@@ -128,11 +128,12 @@ body {
 
 .nav-hamburger {
     display: none;
-    max-width: 60px;
+    max-width: 48px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
     cursor: pointer;
+    align-self: center;
 }
 
 .nav-hamburger>img {
