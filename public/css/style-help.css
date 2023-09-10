@@ -1,87 +1,74 @@
-.title {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 40px;
-    font-family: Roboto, sans-serif;
+.faq,.title{
+    display:flex;
+    box-sizing:border-box
 }
-
-.faq {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    width: fit-content;
-    box-sizing: border-box;
-    padding: 1% 2%;
+.faq,.question,.title{
+    box-sizing:border-box
 }
-
-.question {
-    display: flex;
-    box-sizing: border-box;
-    font-size: 26px;
-    font-family: Roboto, sans-serif;
-    width: 100%;
-    max-width: 800px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    background-color: #D7E3EA;
-    padding: 2%;
-    margin: 10px 0;
-    justify-content: space-between;
-    border-radius: 5px;
+.answer,.fa{
+    transition:.3s
 }
-
-.question:hover {
-    background-color: #CED7DB;
-    transition: 0.4s;
+.title{
+    justify-content:center;
+    text-align:center;
+    font-size:40px;
+    font-family:Roboto,sans-serif
 }
-
-.answer {
-    display: flex;
-    box-sizing: border-box;
-    font-size: 20px;
-    font-family: Roboto, sans-serif;
-    max-height: 0px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 800px;
-    padding: 0 1%;
-    overflow: hidden;
-    transition: 0.3s ease;
+.faq{
+    flex-direction:column;
+    align-items:center;
+    align-self:center;
+    width:fit-content;
+    padding:1% 2%
 }
-
-.answer.active {
-    margin-bottom: 20px;
+.answer,.question{
+    display:flex;
+    width:100%;
+    max-width:800px
 }
-
-.fa {
-    transition: 0.3s ease;
+.question{
+    font-size:26px;
+    font-family:Roboto,sans-serif;
+    cursor:pointer;
+    outline:0;
+    border:none;
+    background-color:#d7e3ea;
+    padding:2%;
+    margin:10px 0;
+    justify-content:space-between;
+    border-radius:5px
 }
-
-.answer-content {
-    box-sizing: border-box;
-    font-size: 20px;
-    font-family: Roboto, sans-serif;
-    opacity: 0.8;
+.answer,.answer-content{
+    box-sizing:border-box;
+    font-size:20px;
+    font-family:Roboto,sans-serif
 }
-
-.question.active>.fa {
-    transform: rotate(180deg);
+.question:hover{
+    background-color:#ced7db;
+    transition:.4s
 }
-
-@media only screen and (max-width: 800px) {
-    .title {
-        font-size: 32px;
+.answer{
+    max-height:0;
+    padding:0 1%;
+    overflow:hidden
+}
+.answer.active{
+    margin-bottom:20px
+}
+.answer-content{
+    opacity:.8
+}
+.question.active>.fa{
+    transform:rotate(180deg)
+}
+@media only screen and (max-width:800px){
+    .title{
+        font-size:32px
     }
-
-    .question {
-        font-size: 20px;
+    .question{
+        font-size:20px
     }
-
-    .answer-content {
-        font-size: 16px;
+    .answer-content{
+        font-size:16px
     }
 }

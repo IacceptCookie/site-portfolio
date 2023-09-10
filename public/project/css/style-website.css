@@ -1,160 +1,123 @@
-.fr::before {
-    background-image: url(../../img/fr.webp);
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
+.en::before,.fr::before{
+    content:'';
+    display:inline-block;
+    width:30px;
+    margin-right:10px;
+    background-size:contain;
+    background-repeat:no-repeat
 }
-
-.en::before {
-    background-image: url(../../img/us.webp);
-    content: '';
-    display: inline-block;
-    align-self: center;
-    width: 30px;
-    height: 16px;
-    margin-right: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
+.presentation-subtitle,.presentation-title{
+    width:fit-content;
+    height:fit-content;
+    margin:0;
+    font-family:"Founders Grotesk",Inter,helvetica,arial,sans-serif;
+    text-align:center;
+    display:flex;
+    color:#fff
 }
-
-.presentation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #00000000, #080957) , url("../../img/dev-desk.webp") center no-repeat;
-    background-size: cover;
-    padding: 5% 0;
-    min-height: 50vh;
+.fr::before{
+    background-image:url(../../img/fr.webp);
+    height:20px;
+    vertical-align:middle
 }
-
-.presentation-title {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    margin: 0;
-    color: white;
-    font-size: 110px;
-    font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
-    text-align: center;
+.en::before{
+    background-image:url(../../img/us.webp);
+    align-self:center;
+    height:16px
 }
-
-.presentation-subtitle {
-    display: flex;
-    width: fit-content;
-    height: fit-content;
-    margin: 0;
-    color: white;
-    font-size: 40px;
-    font-family: "Founders Grotesk",Inter,helvetica,arial,sans-serif;
-    font-weight: bold;
-    text-align: center;
+.presentation{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(to right,#00000000,#080957) 0 0/cover,url("../../img/dev-desk.webp") center/cover no-repeat;
+    padding:5% 0;
+    min-height:50vh
 }
-
-.description {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
+.presentation-title{
+    font-size:110px
 }
-
-.description-left, .description-right {
-    display: flex;
-    flex: 1;
-    box-sizing: border-box;
-    flex-direction: row;
-    padding: 2% 4%;
+.presentation-subtitle{
+    font-size:40px;
+    font-weight:700
 }
-
-.description-left {
-    background-color: #080957;
+.description{
+    display:flex;
+    box-sizing:border-box;
+    flex-direction:column
 }
-
-.description-left>.description-info {
-    color: white;
-    border: #7577cd dashed 6px;
+.description-left,.description-right{
+    display:flex;
+    flex:1;
+    box-sizing:border-box;
+    flex-direction:row;
+    padding:2% 4%
 }
-
-.description-right>.description-info {
-    border: #080957 dashed 6px;
+.description-left{
+    background-color:#080957
 }
-
-.description-filler {
-    width: 50px;
+.description-left>.description-info{
+    color:#fff;
+    border:6px dashed #7577cd
 }
-
-.description-picture-area {
-    display: flex;
-    flex: 1;
-    box-sizing: border-box;
-    justify-content: center;
+.description-right>.description-info{
+    border:6px dashed #080957
 }
-
-.description-picture {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    align-self: center;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    flex: 1;
+.description-info,.description-picture{
+    display:flex;
+    box-sizing:border-box;
+    border-radius:10px
 }
-
-.description-info {
-    flex: 1;
-    display: flex;
-    box-sizing: border-box;
-    padding: 2%;
-    border-radius: 10px;
-    font-family: Source Sans Pro, sans-serif;
-    font-size: 24px;
+.description-filler{
+    width:50px
 }
-
-@media only screen and (max-width: 800px) {
-    .presentation-title {
-        font-size: 90px;
+.description-picture-area{
+    display:flex;
+    flex:1;
+    box-sizing:border-box;
+    justify-content:center
+}
+.description-picture{
+    flex-direction:column;
+    align-self:center;
+    max-width:100%;
+    height:auto;
+    flex:1
+}
+.description-info{
+    flex:1;
+    padding:2%;
+    font-family:Source Sans Pro,sans-serif;
+    font-size:24px
+}
+@media only screen and (max-width:800px){
+    .presentation-title{
+        font-size:90px
     }
-
-    .presentation-subtitle {
-        font-size: 34px;
+    .presentation-subtitle{
+        font-size:34px
     }
-
-    .description-left {
-        flex-direction: column;
+    .description-left{
+        flex-direction:column
     }
-
-    .description-right {
-        flex-direction: column-reverse;
+    .description-right{
+        flex-direction:column-reverse
     }
-
-    .description-left>.description-info, .description-right>.description-info {
-        border: none;
+    .description-left>.description-info,.description-right>.description-info{
+        border:none
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .presentation {
-        padding: 10% 0;
+@media only screen and (max-width:600px){
+    .presentation{
+        padding:10% 0
     }
-
-    .presentation-title {
-        font-size: 50px;
+    .presentation-title{
+        font-size:50px
     }
-
-    .presentation-subtitle {
-        font-size: 24px;
+    .presentation-subtitle{
+        font-size:24px
     }
-
-    .description-right>.description-info {
-        font-size: 16px;
-    }
-
-    .description-left>.description-info {
-        font-size: 16px;
+    .description-left>.description-info,.description-right>.description-info{
+        font-size:16px
     }
 }

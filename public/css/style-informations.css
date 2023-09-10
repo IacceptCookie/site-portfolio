@@ -1,15 +1,13 @@
-.terms-of-use {
-    display: flex;
-    max-width: 1000px;
-    flex-direction: column;
-    align-self: center;
-    padding: 1%;
+.terms-of-use{
+    display:flex;
+    max-width:1000px;
+    flex-direction:column;
+    align-self:center;
+    padding:1%
 }
-
-.terms-of-use>* {
-    font-family: Roboto, sans-serif;
+.terms-of-use>*{
+    font-family:Roboto,sans-serif
 }
-
-.contact-link {
-    color: black;
+.contact-link{
+    color:#000
 }

@@ -1,151 +1,115 @@
-.projects-area {
-    display: flex;
-    flex-direction: column;
-    background-color: #080957;
-    padding-bottom: 1%;
+.alter,.sound,.website{
+    background-size:cover;
+    background-position:center
 }
-
-.projects-title {
-    text-align: center;
-    box-sizing: border-box;
-    width: fit-content;
-    align-self: center;
-    padding: 0.5%;
-    color: white;
-    font-family: Source Sans Pro, sans-serif ;
-    font-size: 40px;
+.content-project>h1,.project>p{
+    color:#fff;
+    font-family:Roboto,sans-serif
 }
-
-.projects-view {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: center;
-    padding: 0 5%;
-    flex: 1;
+.project,.project>p{
+    text-decoration:none;
+    display:flex
 }
-
-.project {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex: 1;
-    margin: 0 0.5%;
-    border: #7577cd solid 3px;
-    background-color: #3033AD;
-    border-radius: 3px;
-    text-decoration: none;
+.old-projects-title,.projects-title{
+    text-align:center;
+    box-sizing:border-box;
+    width:fit-content;
+    align-self:center;
+    font-family:Source Sans Pro,sans-serif;
+    font-size:40px
 }
-
-.project:hover {
-    box-shadow: 0 0 10px 5px #7577cd;
-    transition-duration: 0.3;
+.projects-area{
+    display:flex;
+    flex-direction:column;
+    background-color:#080957;
+    padding-bottom:1%
 }
-
-.alter {
-    background-image: url("../img/view-modern-office.webp");
-    background-size: cover;
-    background-position: center;
+.projects-title{
+    padding:.5%;
+    color:#fff
 }
-
-.sound {
-    background-image: url("../img/recording.webp");
-    background-size: cover;
-    background-position: center;
+.old-projects-view,.projects-view{
+    display:flex;
+    flex-direction:row;
+    box-sizing:border-box;
+    justify-content:center;
+    padding:0 5%;
+    flex:1
 }
-
-.website {
-    background-image: url("../img/dev-desk.webp");
-    background-size: cover;
-    background-position: center;
+.project{
+    flex-direction:column;
+    box-sizing:border-box;
+    flex:1;
+    margin:0 .5%;
+    border:3px solid #7577cd;
+    background-color:#3033ad;
+    border-radius:3px
 }
-
-.content-project {
-    display: flex;
-    flex: 1;
-    background-color: rgba(41, 41, 78, 0.8);
+.project:hover{
+    box-shadow:0 0 10px 5px #7577cd;
+    transition-duration:.3
 }
-
-.content-project>h1 {
-    display: flex;
-    box-sizing: border-box;
-    color: white;
-    font-size: 24px;
-    font-family: Roboto, sans-serif;
-    font-weight: 600;
-    margin: 1%;
-    flex: 1;
-    min-height: 250px;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
+.alter{
+    background-image:url("../img/view-modern-office.webp")
 }
-
-.project>p {
-    display: flex;
-    box-sizing: border-box;
-    color: white;
-    font-size: 20px;
-    font-family: Roboto, sans-serif;
-    padding: 2%;
-    text-decoration: none;
-    justify-content: center;
-    flex-direction: column;
+.sound{
+    background-image:url("../img/recording.webp")
 }
-
-.project:hover .content-project {
-    background-color: rgba(47, 46, 55, 0.4);
-    transition-duration: 0.3s;
+.website{
+    background-image:url("../img/dev-desk.webp")
 }
-
-.old-projects-area {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding-bottom: 1%;
-    flex: 1;
+.content-project{
+    display:flex;
+    flex:1;
+    background-color:rgba(41,41,78,.8)
 }
-
-.old-projects-title {
-    text-align: center;
-    box-sizing: border-box;
-    width: fit-content;
-    align-self: center;
-    padding: 0.5%;
-    color: black;
-    font-family: Source Sans Pro, sans-serif ;
-    font-size: 40px;
+.content-project>h1{
+    display:flex;
+    box-sizing:border-box;
+    font-size:24px;
+    font-weight:600;
+    margin:1%;
+    flex:1;
+    min-height:250px;
+    text-align:center;
+    justify-content:center;
+    flex-direction:column
 }
-
-.old-projects-view {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    justify-content: center;
-    padding: 0 5%;
-    flex: 1;
+.project>p{
+    box-sizing:border-box;
+    font-size:20px;
+    padding:2%;
+    justify-content:center;
+    flex-direction:column
 }
-
-@media only screen and (max-width: 800px) {
-    .projects-view {
-        flex-direction: column;
+.project:hover .content-project{
+    background-color:rgba(47,46,55,.4);
+    transition-duration:.3s
+}
+.old-projects-area{
+    display:flex;
+    flex-direction:column;
+    background-color:#fff;
+    padding-bottom:1%;
+    flex:1
+}
+.old-projects-title{
+    padding:.5%;
+    color:#000
+}
+@media only screen and (max-width:800px){
+    .projects-view{
+        flex-direction:column
     }
-
-    .project {
-        margin: 1% 0;
+    .project{
+        margin:1% 0
     }
-
-    .projects-title, .old-projects-title {
-        font-size: 32px;
+    .old-projects-title,.projects-title{
+        font-size:32px
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .content-project>h1 {
-        font-size: 18px;
-    }
-
-    .content-project>p {
-        font-size: 18px;
+@media only screen and (max-width:600px){
+    .content-project>h1,.content-project>p{
+        font-size:18px
     }
 }
