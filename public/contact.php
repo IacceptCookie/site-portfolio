@@ -90,6 +90,6 @@ if ($json->success) {
     echo "<script type='text/javascript'>document.location.replace('contact.html');</script>";
     exit();
 } else {
-    echo "<script type='text/javascript'>document.location.replace('index.html');</script>";
+    echo "<script type='text/javascript'>document.location.replace('contact.html');</script>";
     exit();
 }
