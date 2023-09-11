@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="../css/style-common.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" href="../img/logo/favicon.png" type="image/x-icon">
+        <script src="https://www.google.com/recaptcha/enterprise.js?hl=en"></script>
     </head>
     <body>
         <header class="header" id="myHeader">
@@ -79,7 +80,11 @@
                 <input type="checkbox" name="cgu" id="cgu" class="form-cgu" required>
                 I have read and I accept the <a href="informations.html">terms and conditions of use</a>
             </label>
-            <button type="submit" class="form-submit">Send</button>
+            <button type="submit" class="form-submit g-recaptcha" data-sitekey="6Ldk4RkoAAAAAMGGOGnEhh3hGFlb4QT7MwrjiA5Z" 
+                data-callback='onSubmit'
+                data-action='submit'>
+                Send
+            </button>
         </form>
         <p class="warning">Please do not leave spams/advertisements, professional contact only.
             Inappropriate messages will be ignored. By filling this form, you consent to communicate
@@ -112,5 +117,10 @@
         </div>
         <script src="../js/nav.js"></script>
         <script src="../js/cookie.js"></script>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("contact").submit();
+            }
+         </script>
     </body>
 </html>
