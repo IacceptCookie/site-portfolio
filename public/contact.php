@@ -9,7 +9,7 @@ function test_input($data): string
     return htmlspecialchars($data);
 }
 
-$recaptchaSecretKey = '6Ldk4RkoAAAAAOIO6dYDygmRlX9tlZvM5YRGLjKg';
+$recaptchaSecretKey = file_get_contents('../.key', true);
 $recaptchaResponse = $_POST['g-recaptcha-response'];
 
 $url = 'https://www.google.com/recaptcha/api/siteverify';
