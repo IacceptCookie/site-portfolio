@@ -118,9 +118,15 @@
         <script src="../js/nav.js"></script>
         <script src="../js/cookie.js"></script>
         <script>
-            function onSubmit(token) {
-              document.getElementById("contact").submit();
+            function onSubmit(token) {            
+                var applicationForm = document.getElementById("contact-form");    
+                if (applicationForm.checkValidity()) {
+                    document.getElementById("contact-form").submit();                
+                } else {
+                  applicationForm.reportValidity();
+                }
+                        
             }
-         </script>
+        </script>
     </body>
 </html>
