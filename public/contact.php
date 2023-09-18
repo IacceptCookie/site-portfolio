@@ -6,7 +6,7 @@ function test_input($data): string
 {
     $data = trim($data);
     $data = stripslashes($data);
-    return htmlspecialchars($data);
+    return $data;
 }
 
 $recaptchaSecretKey = file_get_contents('../.key', true);
